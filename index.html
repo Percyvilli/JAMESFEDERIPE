@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="color-scheme" content="light dark">
+  <title>James Federipe - Virtual Assistant</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">James Federipe</div>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#tools">Tool I Use</a></li>
+      <li><a href="#process">How I Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Dark mode toggle -->
+    <button id="theme-toggle" aria-label="Toggle theme">
+      <svg id="sun-icon" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <svg id="moon-icon" class="theme-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+  </nav>
+
+  <div class="container">
+
+    <!-- About Me -->
+    <section id="about" class="about">
+      <div class="about-img">
+        <img src="c:\Servers\my-portfolio\images\james.jpg" alt="James Federipe">
+      </div>
+      <div class="about-text">
+        <h1>James Federipe</h1>
+        <h2>Virtual Assistant</h2>
+        <p>
+          I'm currently a college student with a strong passion for technology, productivity, and continuous self-improvement. Even though I'm still completing my studies, I've already built solid hands-on experience using modern digital tools and platforms such as Microsoft Excel, Google Workspace (Docs, Sheets, Slides, Gmail), Canva for design work, Zoom for meetings, and several AI assistants.
+        </p>
+        <p>
+          Through school projects, freelance tasks, and personal experiments, I've developed reliable technical skills, fast learning ability, strong attention to detail, and the habit of adapting quickly to new software or workflows. I'm always excited to explore better ways of doing things and turning what I learn into real value for others.
+        </p>
+        <p>
+          I genuinely enjoy helping people and small businesses save time, reduce stress, and stay organized. With my growing skill set, dependable work ethic, and enthusiasm for tech, I believe I can become a valuable, long-term support partner — delivering reliability, clear communication, creativity, and consistent results.
+        </p>
+
+        <a class="email-btn">CONTACTS</a>
+
+        <div class="social-icons">
+          <a href="https://twitter.com/YOUR_TWITTER" target="_blank" title="Twitter / X">🐦</a>
+          <a href="https://m.me/YOUR_FB_USERNAME" target="_blank" title="Facebook Messenger">💬</a>
+          <a href="https://t.me/YOUR_TELEGRAM" target="_blank" title="Telegram">✈️</a>
+          <a href="mailto:your.email@gmail.com" title="Email">✉️</a>
+          <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" title="GitHub">🐙</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+      <h2>SERVICES</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-img">💻</div>
+          <div class="service-content">
+            <h3>Data Entry</h3>
+            <p>I handle accurate, organized, and efficient data entry using Excel, Google Sheets, or any company database/system you use. I make sure every piece of information is correctly entered, properly formatted, checked for errors, and easy to find or analyze later. I can also clean up messy existing data, create simple summaries, or set up basic tracking tables — saving you hours of manual work.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img">📧</div>
+          <div class="service-content">
+            <h3>Email Management</h3>
+            <p>I take full responsibility for keeping your inbox under control: sorting messages, responding to routine inquiries, filtering spam/junk, drafting polite professional replies, archiving old threads, and setting up filters/labels/rules. The goal is a clean, calm inbox where you only see what truly needs your attention — without missing anything important.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img">🖥️</div>
+          <div class="service-content">
+            <h3>Inbox & Communication Management</h3>
+            <p>I organize your entire email flow: prioritizing urgent messages, categorizing by topic/project/client, responding to simple questions on your behalf (with your tone/approval), scheduling follow-ups, and maintaining professional communication. You get regular updates on what's been handled so you always feel in control while focusing on higher-value work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tool I Use -->
+    <section id="tools" class="tools-section">
+      <h2>TOOL I USE</h2>
+      <p class="subtitle">Platforms</p>
+
+      <div class="carousel-wrapper">
+        <button class="carousel-arrow prev">←</button>
+        <div class="tools-carousel" id="toolsCarousel">
+          <div class="tool-card"><img src="c:\Servers\my-portfolio\images\excel-png.webp" alt="Excel"><span>Excel</span></div>
+          <div class="tool-card"><img src="c:\Servers\my-portfolio\images\1409-canva.png" alt="Canva"><span>Canva</span></div>
+          <div class="tool-card"><img src="c:\Servers\my-portfolio\images\OIP (1).webp"><span>Google Docs</span></div>
+          <div class="tool-card"><img src="c:\Servers\my-portfolio\images\google-sheets-apps-logo-free-png.webp" alt="Google Sheets"><span>Google Sheets</span></div>
+          <div class="tool-card"><img src="c:\Servers\my-portfolio\images\gmail-icon-free-png.webp" alt="Gmail"><span>Gmail</span></div>
+          <div class="tool-card"><img src="c:\Servers\my-portfolio\images\OIP (2).webp" alt="Zoom"><span>Zoom</span></div>
+          <div class="tool-card"><img src="c:\Servers\my-portfolio\images\chatgpt-logo-chat-gpt-icon-on-green-background-free-vector.jpg" alt="ChatGPT"><span>ChatGPT</span></div>
+          <div class="tool-card"><img src="c:\Servers\my-portfolio\images\meta-icon-new-facebook-2021-logo-png_seeklogo-424014.png" alt="Meta AI"><span>Meta AI</span></div>
+          <div class="tool-card"><img src="c:\Servers\my-portfolio\images\grok-icon.png" alt="Grok"><span>Grok</span></div>
+        </div>
+        <button class="carousel-arrow next">→</button>
+      </div>
+    </section>
+
+    <!-- How I Work With Clients -->
+    <section id="process" class="process-section">
+      <h2>How I Work With Clients</h2>
+      <p class="subtitle">My clear, transparent 4-step process makes collaboration smooth, predictable, and stress-free.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Initial Discussion & Understanding Your Needs</h3>
+          <p>We begin with a quick, friendly conversation (email, Telegram, Messenger, or a short Zoom call — your choice). I ask questions and really listen so I fully understand:</p>
+          <ul>
+            <li>Which tasks are taking up most of your time</li>
+            <li>What specific outcomes you want to achieve</li>
+            <li>Your preferred way of communicating and updating</li>
+            <li>Any tools, passwords, or access you already use</li>
+            <li>Your timeline, budget range, and priorities</li>
+          </ul>
+          <p>This first step is always free and no-obligation — usually 15–40 minutes. The goal is complete clarity before any commitment.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Planning & Written Agreement</h3>
+          <p>After our talk, I prepare a short, easy-to-read proposal that includes:</p>
+          <ul>
+            <li>Exact tasks/services I will handle</li>
+            <li>Estimated weekly/monthly hours or fixed package</li>
+            <li>How and how often I'll send updates (daily messages, weekly summary, etc.)</li>
+            <li>My rate and simple payment terms</li>
+            <li>Start date and any tools/access needed</li>
+          </ul>
+          <p>You review it, ask for changes if needed, and we both agree before I start any paid work. Everything is written clearly — no surprises.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Execution & Consistent Updates</h3>
+          <p>I begin working using your preferred tools and style. During active work you can expect:</p>
+          <ul>
+            <li>Regular progress updates (daily quick messages or weekly detailed reports)</li>
+            <li>Fast replies to any questions or new requests</li>
+            <li>Proactive ideas if I notice better/faster ways to do something</li>
+            <li>Full transparency — you always know what's done and what's next</li>
+          </ul>
+          <p>I only proceed with major decisions after your approval. You stay in control at all times.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Review, Feedback & Continuous Improvement</h3>
+          <p>At the end of each week, project phase, or task batch:</p>
+          <ul>
+            <li>I deliver all finished work (files, organized folders, inbox screenshots, reports, etc.)</li>
+            <li>We do a short review (message or quick call)</li>
+            <li>You share what you liked and what could be improved</li>
+            <li>I make any adjustments immediately</li>
+            <li>We decide next steps — continue, change scope, or pause</li>
+          </ul>
+          <p>My main goal is your complete satisfaction. If anything isn't right, I fix it quickly at no extra charge.</p>
+        </div>
+      </div>
+
+      <div class="process-cta">
+        <p>Ready to get started and reclaim your time?</p>
+        <a href="mailto:your.email@gmail.com" class="email-btn">Let's Get Started →</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <p>I'm excited to hear about your needs and how I can support you. Just fill out the form or send me a direct message — I usually reply within 24 hours.</p>
+
+      <form id="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Tell me about your project or what help you need..." rows="6" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
