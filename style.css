@@ -32,7 +32,6 @@ body {
   transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* Navigation */
 nav {
   background: var(--card);
   padding: 16px 24px;
@@ -85,14 +84,13 @@ nav a:hover {
   display: none;
 }
 
-/* Container */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 32px 20px;
 }
 
-/* About */
+
 .about {
   display: flex;
   flex-wrap: wrap;
@@ -139,7 +137,6 @@ nav a:hover {
   background: #4f46e5;
 }
 
-/* Updated social icons – image only */
 .social-icons {
   margin-top: 24px;
   display: flex;
@@ -170,7 +167,6 @@ nav a:hover {
   filter: brightness(1.1);
 }
 
-/* Education */
 .education {
   margin-bottom: 80px;
 }
@@ -221,7 +217,6 @@ nav a:hover {
   color: var(--muted);
 }
 
-/* Services */
 .services {
   margin-bottom: 100px;
 }
@@ -269,7 +264,6 @@ nav a:hover {
   margin-bottom: 12px;
 }
 
-/* Tools */
 .tools-section {
   margin: 100px 0;
 }
@@ -346,7 +340,6 @@ nav a:hover {
 .prev { left: 4px; }
 .next { right: 4px; }
 
-/* Process */
 .process-section {
   text-align: center;
   margin: 80px 0;
@@ -420,7 +413,6 @@ nav a:hover {
   margin-bottom: 8px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .about {
     flex-direction: column;
