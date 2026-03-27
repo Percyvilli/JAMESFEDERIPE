@@ -28,6 +28,7 @@ toggle.addEventListener('click', () => {
 
 loadTheme();
 
+
 const carousel = document.getElementById('toolsCarousel');
 document.querySelector('.prev').addEventListener('click', () => carousel.scrollBy({left:-160, behavior:'smooth'}));
 document.querySelector('.next').addEventListener('click', () => carousel.scrollBy({left:160, behavior:'smooth'}));
