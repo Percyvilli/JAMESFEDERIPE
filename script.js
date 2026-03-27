@@ -1,4 +1,4 @@
-// Dark mode
+
 const toggle = document.getElementById('theme-toggle');
 const sun = document.getElementById('sun-icon');
 const moon = document.getElementById('moon-icon');
@@ -32,9 +32,4 @@ const carousel = document.getElementById('toolsCarousel');
 document.querySelector('.prev').addEventListener('click', () => carousel.scrollBy({left:-160, behavior:'smooth'}));
 document.querySelector('.next').addEventListener('click', () => carousel.scrollBy({left:160, behavior:'smooth'}));
 
-// Contact form feedback
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert("Message sent! I'll get back to you within 24 hours.");
-  this.reset();
 });
