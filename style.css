@@ -11,8 +11,8 @@
 
 :root {
   --bg:        #f5f3ef;
-  --bg2:       #edeae4;
-  --card:      #ffffff;
+  --bg2:       white;
+  --card:      #edeae4;
   --text:      #1a1814;
   --text-muted:#7a7570;
   --accent:    #c8722a;
@@ -348,7 +348,7 @@ h1, h2, h3, h4, .nav-logo, .hero-name {
   align-items: center;
   gap: 32px;
   margin-top: 60px;
-  padding: 28px 40px;
+  padding: 35px 40px;
   background: var(--card);
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
