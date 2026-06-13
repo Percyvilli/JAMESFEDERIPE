@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -8,259 +8,341 @@
   <title>James Federipe — Virtual Assistant</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- ===== CURSOR ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== NOISE OVERLAY ===== -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
   <!-- ===== NAV ===== -->
   <nav id="navbar">
-    <a href="#" class="nav-logo">JF<span class="dot">.</span></a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#tools">Tools</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#process">Process</a></li>
-      <li>
-        <button id="theme-toggle" aria-label="Toggle theme">
-          <svg id="sun-icon" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <svg id="moon-icon" class="theme-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-      </li>
-    </ul>
+    <a href="#home" class="nav-logo" data-nav="home">JF<span class="dot">.</span></a>
+
+    <div class="nav-center">
+      <a href="#home" class="nav-link" data-nav="home">Home</a>
+      <a href="#work" class="nav-link" data-nav="work">Work</a>
+      <a href="#services" class="nav-link" data-nav="services">Services</a>
+      <a href="#tools" class="nav-link" data-nav="tools">Tools</a>
+      <a href="#education" class="nav-link" data-nav="education">Education</a>
+      <a href="#contact" class="nav-link" data-nav="contact">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <svg id="sun-icon" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg id="moon-icon" class="theme-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" class="mob-link" data-nav="home">Home</a>
+      <a href="#work" class="mob-link" data-nav="work">Work</a>
+      <a href="#services" class="mob-link" data-nav="services">Services</a>
+      <a href="#tools" class="mob-link" data-nav="tools">Tools</a>
+      <a href="#education" class="mob-link" data-nav="education">Education</a>
+      <a href="#contact" class="mob-link" data-nav="contact">Contact</a>
+    </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
-  <section id="about" class="hero">
-    <div class="hero-bg-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-    </div>
-    <div class="hero-inner">
-      <div class="hero-img-wrap">
-        <div class="hero-img-ring"></div>
-        <img src="james.jpg" alt="James Federipe" class="hero-img">
-        <span class="status-badge">🟢 Available for work</span>
-      </div>
-      <div class="hero-text">
-        <p class="hero-eyebrow reveal">Virtual Assistant · AI Video Creator · Junior Developer</p>
-        <h1 class="hero-name reveal">James<br><span class="outline-text">Federipe</span></h1>
-        <p class="hero-bio reveal">
-          College student & tech-forward VA based in the Philippines. I blend sharp organizational skills with cutting-edge AI tools to help businesses move faster, stay organized, and create standout content — without the burnout.
-        </p>
-        <div class="hero-cta reveal">
-          <a href="https://x.com/percyvillii" class="btn btn-primary">Email Me</a>
-          <a href="#experience" class="btn btn-ghost">View My Work ↓</a>
-        </div>
-        <div class="social-icons reveal">
-          <a href="https://x.com/percyvillii" target="_blank" title="Twitter / X" aria-label="Twitter">
-            <img src="OIP.webp" alt="Twitter">
-          </a>
-          <a href="https://www.facebook.com/share/1GWirLEnjt/" target="_blank" title="Facebook" aria-label="Facebook">
-            <img src="facebook-icon-vector-39772994.webp" alt="Facebook">
-          </a>
-          <a href="https://t.me/percyvilli" target="_blank" title="Telegram" aria-label="Telegram">
-            <img src="OIP (3).webp" alt="Telegram">
-          </a>
-          <a href="https://www.instagram.com/federipejames?igsh=MWJncTBiNDQ0ZjkwYg==" target="_blank" title="Instagram" aria-label="Instagram">
-            <img src="OIP (4).webp" alt="Instagram">
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="hero-stats reveal">
-      <div class="stat"><span class="stat-num">2+</span><span class="stat-label">Years Learning</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Tools Mastered</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num">7</span><span class="stat-label">Core Services</span></div>
-    </div>
-  </section>
+  <!-- ===== PAGE: HOME ===== -->
+  <section id="home" class="page active-page">
 
-  <!-- ===== WORK EXPERIENCE ===== -->
-  <section id="experience" class="section experience-section">
+    <!-- HERO -->
+    <div class="hero-wrap">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="orb orb-1" aria-hidden="true"></div>
+      <div class="orb orb-2" aria-hidden="true"></div>
+      <div class="orb orb-3" aria-hidden="true"></div>
+
+      <div class="hero-inner container">
+        <div class="hero-left">
+          <div class="hero-badge reveal">
+            <span class="badge-dot"></span> Available for work
+          </div>
+          <h1 class="hero-name reveal">
+            James<br><em>Federipe</em>
+          </h1>
+          <p class="hero-sub reveal">Virtual Assistant · AI Video Creator · Junior Developer</p>
+          <p class="hero-bio reveal">
+            College student & tech-forward VA from the Philippines. I blend sharp organizational skills with cutting-edge AI tools to help businesses move faster and create standout content.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#contact" class="btn btn-primary">
+              <span>Work With Me</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#work" class="btn btn-outline">See My Work</a>
+          </div>
+          <div class="social-row reveal">
+            <a href="https://x.com/percyvillii" target="_blank" class="social-pill" aria-label="Twitter / X">𝕏 Twitter</a>
+            <a href="https://www.facebook.com/share/1GWirLEnjt/" target="_blank" class="social-pill" aria-label="Facebook">Facebook</a>
+            <a href="https://t.me/percyvilli" target="_blank" class="social-pill" aria-label="Telegram">Telegram</a>
+            <a href="https://www.instagram.com/federipejames?igsh=MWJncTBiNDQ0ZjkwYg==" target="_blank" class="social-pill" aria-label="Instagram">Instagram</a>
+          </div>
+        </div>
+
+        <div class="hero-right reveal">
+          <div class="hero-card-img">
+            <div class="img-frame">
+              <img src="james.jpg" alt="James Federipe" class="hero-photo" onerror="this.style.background='linear-gradient(135deg,#6c3de0,#c8722a)';this.style.minHeight='380px'">
+            </div>
+            <div class="floating-tag tag-1">🎬 AI Video</div>
+            <div class="floating-tag tag-2">💻 Dev</div>
+            <div class="floating-tag tag-3">🖥️ VA</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-bar reveal container">
+        <div class="stat-item">
+          <span class="s-num" data-count="2">0</span><span class="s-unit">+</span>
+          <span class="s-lbl">Years Learning</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <span class="s-num" data-count="16">0</span><span class="s-unit">+</span>
+          <span class="s-lbl">Tools Mastered</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <span class="s-num" data-count="7">0</span><span class="s-unit"></span>
+          <span class="s-lbl">Core Services</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <span class="s-num" data-count="100">0</span><span class="s-unit">%</span>
+          <span class="s-lbl">Remote Ready</span>
+        </div>
+      </div>
+    </div>
+
+  </section><!-- /home -->
+
+  <!-- ===== PAGE: WORK ===== -->
+  <section id="work" class="page">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Work Experience</span>
-        <h2 class="section-title">What I've Done</h2>
+      <div class="page-header reveal">
+        <span class="pill-tag">Experience</span>
+        <h2 class="page-title">What I've Done</h2>
+        <p class="page-sub">Real projects. Real results. Real growth.</p>
       </div>
 
-      <!-- AI Video Creator -->
-      <div class="exp-card reveal">
-        <div class="exp-card-header">
-          <div class="exp-role-info">
-            <span class="exp-badge ai-badge">🎬 AI Video Creator</span>
-            <h3 class="exp-title">AI Video Creator | Editor</h3>
-            <p class="exp-company">Freelance / Self-Initiated Projects</p>
-            <p class="exp-period">February 2026 – Present</p>
+      <!-- AI VIDEO CREATOR -->
+      <div class="work-block reveal">
+        <div class="work-block-label">
+          <span class="role-badge badge-ai">🎬 AI Video Creator</span>
+        </div>
+        <div class="work-block-header">
+          <div>
+            <h3 class="work-title">AI Video Creator & Editor</h3>
+            <p class="work-company">Freelance / Self-Initiated Projects</p>
+            <p class="work-period">February 2026 – Present</p>
           </div>
-          <div class="exp-tools-list">
-            <span class="tool-pill">Kling</span>
-            <span class="tool-pill">Topview (Seedance)</span>
-            <span class="tool-pill">Submagic</span>
-            <span class="tool-pill">CapCut</span>
+          <div class="tool-pills">
+            <span class="tp">Kling</span>
+            <span class="tp">Topview</span>
+            <span class="tp">Submagic</span>
+            <span class="tp">CapCut</span>
           </div>
         </div>
-        <p class="exp-desc">
-          I create AI-generated video content for brands and personal projects using the latest generative video tools. From concept to final cut — scripting, AI video generation, caption styling, and short-form editing optimized for social media platforms.
-        </p>
-        <ul class="exp-bullets">
+        <p class="work-desc">From concept to final cut — scripting, AI video generation, caption styling, and short-form editing optimized for social media platforms.</p>
+        <ul class="work-list">
           <li>Produced short-form AI video ads and reels using Kling and Topview powered by Seedance</li>
           <li>Added animated captions and subtitles with Submagic for accessibility and engagement</li>
           <li>Edited and polished final videos in CapCut with transitions, music sync, and color grading</li>
           <li>Delivered content formatted for TikTok, Instagram Reels, and YouTube Shorts</li>
         </ul>
-        <!-- Video samples grid -->
-        <div class="video-grid">
-          <div class="video-placeholder" data-label="Sample 01">
-            <div class="video-placeholder-inner">
-              <div class="play-icon">▶</div>
-              <p>Video Sample 1</p>
-              <span class="video-note">Replace src with your video file</span>
+
+        <!-- VIDEO SAMPLES — 5 slots -->
+        <div class="video-section-label">
+          <span>Video Samples</span>
+          <span class="vs-note">Click to play · Only one plays at a time</span>
+        </div>
+        <div class="video-grid" id="videoGrid">
+          <div class="vid-card" data-index="0">
+            <div class="vid-overlay">
+              <button class="vid-play-btn" aria-label="Play video">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <div class="vid-label">Sample 01</div>
             </div>
-          
-            <video controls poster="thumb1.jpg">
+            <video preload="none" poster="thumb1.jpg">
               <source src="0417(1).mp4" type="video/mp4">
             </video>
-            
-          </div>
-          <div class="video-placeholder" data-label="Sample 02">
-            <div class="video-placeholder-inner">
-              <div class="play-icon">▶</div>
-              <p>Video Sample 2</p>
-              <span class="video-note">Replace src with your video file</span>
+            <div class="vid-footer">
+              <span>AI Video Ad · Kling + CapCut</span>
+              <span class="vid-dur" id="dur0"></span>
             </div>
-            <video controls poster="thumb1.jpg">
+          </div>
+
+          <div class="vid-card" data-index="1">
+            <div class="vid-overlay">
+              <button class="vid-play-btn" aria-label="Play video">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <div class="vid-label">Sample 02</div>
+            </div>
+            <video preload="none" poster="thumb2.jpg">
               <source src="0417 (1)(1).mp4" type="video/mp4">
             </video>
-          </div>
-          <div class="video-placeholder" data-label="Sample 03">
-            <div class="video-placeholder-inner">
-              <div class="play-icon">▶</div>
-              <p>Video Sample 3</p>
-              <span class="video-note">Replace src with your video file</span>
+            <div class="vid-footer">
+              <span>Social Reel · Topview + Submagic</span>
+              <span class="vid-dur" id="dur1"></span>
             </div>
-            <video controls poster="thumb1.jpg">
+          </div>
+
+          <div class="vid-card" data-index="2">
+            <div class="vid-overlay">
+              <button class="vid-play-btn" aria-label="Play video">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <div class="vid-label">Sample 03</div>
+            </div>
+            <video preload="none" poster="thumb3.jpg">
               <source src="Video Edit 1.mp4" type="video/mp4">
             </video>
-          </div>
-          <div class="video-placeholder" data-label="Sample 04">
-            <div class="video-placeholder-inner">
-              <div class="play-icon">▶</div>
-              <p>Video Sample 4</p>
-              <span class="video-note">Replace src with your video file</span>
+            <div class="vid-footer">
+              <span>Brand Edit · CapCut</span>
+              <span class="vid-dur" id="dur2"></span>
             </div>
-            <video controls poster="thumb1.jpg">
+          </div>
+
+          <div class="vid-card" data-index="3">
+            <div class="vid-overlay">
+              <button class="vid-play-btn" aria-label="Play video">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <div class="vid-label">Sample 04</div>
+            </div>
+            <video preload="none" poster="thumb4.jpg">
               <source src="Video Edit 2.mp4" type="video/mp4">
             </video>
+            <div class="vid-footer">
+              <span>Short-Form Edit · CapCut</span>
+              <span class="vid-dur" id="dur3"></span>
+            </div>
+          </div>
+
+          <div class="vid-card" data-index="4">
+            <div class="vid-overlay">
+              <button class="vid-play-btn" aria-label="Play video">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <div class="vid-label">Sample 05</div>
+            </div>
+            <video preload="none" poster="thumb5.jpg">
+              <!-- ADD YOUR 5TH VIDEO HERE: <source src="your-video-5.mp4" type="video/mp4"> -->
+            </video>
+            <div class="vid-footer">
+              <span>Coming Soon</span>
+              <span class="vid-dur" id="dur4"></span>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- General Virtual Assistant -->
-      <div class="exp-card reveal">
-        <div class="exp-card-header">
-          <div class="exp-role-info">
-            <span class="exp-badge va-badge">🖥️ General VA</span>
-            <h3 class="exp-title">General Virtual Assistant</h3>
-            <p class="exp-company">Freelance / Remote Clients</p>
-            <p class="exp-period">April 2026 – Present</p>
+      <!-- GENERAL VA -->
+      <div class="work-block reveal">
+        <div class="work-block-label">
+          <span class="role-badge badge-va">🖥️ General VA</span>
+        </div>
+        <div class="work-block-header">
+          <div>
+            <h3 class="work-title">General Virtual Assistant</h3>
+            <p class="work-company">Freelance / Remote Clients</p>
+            <p class="work-period">April 2026 – Present</p>
           </div>
-          <div class="exp-tools-list">
-            <span class="tool-pill">Google Workspace</span>
-            <span class="tool-pill">Excel</span>
-            <span class="tool-pill">Canva</span>
-            <span class="tool-pill">Gmail</span>
-            <span class="tool-pill">Zoom</span>
+          <div class="tool-pills">
+            <span class="tp">Google Workspace</span>
+            <span class="tp">Excel</span>
+            <span class="tp">Canva</span>
+            <span class="tp">Gmail</span>
+            <span class="tp">Zoom</span>
           </div>
         </div>
-        <p class="exp-desc">
-          I provide end-to-end virtual assistance to small business owners and entrepreneurs — handling the day-to-day tasks that eat into their time so they can focus on what matters most.
-        </p>
-        <div class="va-services-grid">
-          <div class="va-service-item">
-            <span class="va-service-icon">💻</span>
+        <p class="work-desc">End-to-end virtual assistance to small business owners and entrepreneurs — handling the day-to-day tasks that eat into their time so they can focus on what matters most.</p>
+        <div class="va-grid">
+          <div class="va-item">
+            <span class="va-icon">💻</span>
             <h4>Data Entry</h4>
-            <p>Accurate, organized entry using Excel, Google Sheets, or any system you use. Includes data cleaning, error-checking, and basic tracking tables.</p>
+            <p>Accurate, organized entry using Excel or Google Sheets. Includes data cleaning, error-checking, and tracking tables.</p>
           </div>
-          <div class="va-service-item">
-            <span class="va-service-icon">✉️</span>
+          <div class="va-item">
+            <span class="va-icon">✉️</span>
             <h4>Email Management</h4>
-            <p>Full inbox control — sorting, filtering, drafting replies, archiving, and setting up labels/rules so you only see what truly matters.</p>
+            <p>Full inbox control — sorting, filtering, drafting replies, archiving, and setting up rules so you only see what matters.</p>
           </div>
-          <div class="va-service-item">
-            <span class="va-service-icon">🖥️</span>
-            <h4>Inbox & Communication</h4>
-            <p>Prioritizing urgent messages, responding on your behalf, scheduling follow-ups, and keeping communication professional and timely.</p>
-          </div>
-          <div class="va-service-item">
-            <span class="va-service-icon">📊</span>
+          <div class="va-item">
+            <span class="va-icon">📊</span>
             <h4>Spreadsheet Management</h4>
-            <p>Building and maintaining trackers, reports, and dashboards in Excel or Google Sheets — from simple logs to formula-driven automation.</p>
+            <p>Building trackers, reports, and dashboards in Excel or Google Sheets — from simple logs to formula-driven automation.</p>
           </div>
-          <div class="va-service-item">
-            <span class="va-service-icon">📱</span>
+          <div class="va-item">
+            <span class="va-icon">📱</span>
             <h4>Social Media Management</h4>
-            <p>Scheduling posts, engaging with followers, repurposing content across platforms, and keeping your brand presence consistent and active.</p>
+            <p>Scheduling posts, engaging with followers, repurposing content across platforms, and keeping your brand presence consistent.</p>
+          </div>
+          <div class="va-item">
+            <span class="va-icon">🖥️</span>
+            <h4>Inbox & Communication</h4>
+            <p>Prioritizing urgent messages, responding on your behalf, scheduling follow-ups, and keeping communication timely.</p>
           </div>
         </div>
       </div>
-      <!-- Junior Developer -->
-      <div class="exp-card reveal">
-        <div class="exp-card-header">
-          <div class="exp-role-info">
-            <span class="exp-badge dev-badge">💻 Junior Developer</span>
-            <h3 class="exp-title">Junior Developer</h3>
-            <p class="exp-company">Personal Projects / Academic Work</p>
-            <p class="exp-period">2025 July – Present</p>
+
+      <!-- JUNIOR DEVELOPER -->
+      <div class="work-block reveal">
+        <div class="work-block-label">
+          <span class="role-badge badge-dev">💻 Junior Developer</span>
+        </div>
+        <div class="work-block-header">
+          <div>
+            <h3 class="work-title">Junior Developer</h3>
+            <p class="work-company">Personal Projects / Academic Work</p>
+            <p class="work-period">July 2025 – Present</p>
           </div>
-          <div class="exp-tools-list">
-            <span class="tool-pill">Java</span>
-            <span class="tool-pill">SQL</span>
-            <span class="tool-pill">HTML</span>
-            <span class="tool-pill">CSS</span>
-            <span class="tool-pill">JavaScript</span>
+          <div class="tool-pills">
+            <span class="tp">Java</span>
+            <span class="tp">SQL</span>
+            <span class="tp">HTML</span>
+            <span class="tp">CSS</span>
+            <span class="tp">JavaScript</span>
           </div>
         </div>
-        <p class="exp-desc">
-          Currently developing my programming foundation through coursework and hands-on personal projects. I build functional web interfaces, write structured backend logic in Java, and manage relational data with SQL — applying everything I learn directly to real builds.
-        </p>
-        <ul class="exp-bullets">
-          <li>Built and styled responsive web pages using HTML, CSS, and vanilla JavaScript</li>
-          <li>Developed Java programs covering OOP principles, data structures, and console-based applications</li>
-          <li>Wrote and queried relational databases using SQL — including joins, aggregates, and basic schema design</li>
-          <li>Applied front-end skills to this portfolio and personal side projects hosted on GitHub</li>
-        </ul>
-        <div class="dev-skills-grid">
-          <div class="dev-skill-item">
-            <span class="dev-skill-icon">☕</span>
+        <p class="work-desc">Building my programming foundation through coursework and hands-on personal projects. I build functional web interfaces, write structured backend logic in Java, and manage relational data with SQL.</p>
+        <div class="dev-grid">
+          <div class="dev-item">
+            <span class="dev-icon">☕</span>
             <div>
               <h4>Java</h4>
               <p>OOP, data structures, console apps, basic algorithms</p>
             </div>
           </div>
-          <div class="dev-skill-item">
-            <span class="dev-skill-icon">🗄️</span>
+          <div class="dev-item">
+            <span class="dev-icon">🗄️</span>
             <div>
               <h4>SQL</h4>
               <p>Queries, joins, aggregates, schema design, CRUD operations</p>
             </div>
           </div>
-          <div class="dev-skill-item">
-            <span class="dev-skill-icon">🌐</span>
+          <div class="dev-item">
+            <span class="dev-icon">🌐</span>
             <div>
               <h4>HTML / CSS</h4>
               <p>Semantic markup, responsive layouts, Flexbox, Grid, animations</p>
             </div>
           </div>
-          <div class="dev-skill-item">
-            <span class="dev-skill-icon">⚡</span>
+          <div class="dev-item">
+            <span class="dev-icon">⚡</span>
             <div>
               <h4>JavaScript</h4>
               <p>DOM manipulation, event handling, async basics, localStorage</p>
@@ -270,166 +352,318 @@
       </div>
 
     </div>
-  </section>
+  </section><!-- /work -->
 
-  <!-- ===== SERVICES ===== -->
-  <section id="services" class="section services-section">
+  <!-- ===== PAGE: SERVICES ===== -->
+  <section id="services" class="page">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">What I Offer</span>
-        <h2 class="section-title">Core Services</h2>
+      <div class="page-header reveal">
+        <span class="pill-tag">What I Offer</span>
+        <h2 class="page-title">Core Services</h2>
+        <p class="page-sub">From admin to AI-powered content — all in one place.</p>
       </div>
-      <div class="services-grid">
-        <div class="service-card reveal">
-          <div class="service-icon-wrap">💻</div>
-          <h3>Data Entry</h3>
-          <p>Accurate, organized, and efficient entry using Excel, Google Sheets, or any system you use — with error-checking, formatting, and cleanup included.</p>
+
+      <div class="services-bento reveal">
+
+        <div class="svc-card svc-large">
+          <div class="svc-num">01</div>
+          <div class="svc-icon-big">🎬</div>
+          <h3>AI Video Creation</h3>
+          <p>Short-form AI-generated videos for social media using Kling, Topview, Submagic, and CapCut — from raw concept to final polished cut. Optimized for TikTok, Reels, and Shorts.</p>
+          <div class="svc-tags">
+            <span>Kling</span><span>CapCut</span><span>Submagic</span><span>Topview</span>
+          </div>
         </div>
-        <div class="service-card reveal">
-          <div class="service-icon-wrap">✉️</div>
+
+        <div class="svc-card">
+          <div class="svc-num">02</div>
+          <div class="svc-icon-big">✉️</div>
           <h3>Email Management</h3>
-          <p>Full inbox control: sorting, filtering, drafting polished replies, archiving old threads, and setting up rules so you only see what matters.</p>
+          <p>Full inbox control: sorting, filtering, drafting polished replies, archiving, and setting up rules so you only see what matters.</p>
+          <div class="svc-tags"><span>Gmail</span><span>Google Workspace</span></div>
         </div>
-        <div class="service-card reveal">
-          <div class="service-icon-wrap">🖥️</div>
-          <h3>Inbox & Communication</h3>
-          <p>Prioritizing urgent messages, responding on your behalf, scheduling follow-ups, and maintaining a professional communication flow at all times.</p>
+
+        <div class="svc-card">
+          <div class="svc-num">03</div>
+          <div class="svc-icon-big">💻</div>
+          <h3>Data Entry</h3>
+          <p>Accurate, organized, and efficient entry using Excel or Google Sheets — with error-checking, formatting, and cleanup included.</p>
+          <div class="svc-tags"><span>Excel</span><span>Google Sheets</span></div>
         </div>
-        <div class="service-card reveal">
-          <div class="service-icon-wrap">📊</div>
+
+        <div class="svc-card">
+          <div class="svc-num">04</div>
+          <div class="svc-icon-big">📊</div>
           <h3>Spreadsheet Management</h3>
-          <p>Building and maintaining trackers, dashboards, and reports in Excel or Google Sheets — from simple logs to formula-driven automation.</p>
+          <p>Building and maintaining trackers, dashboards, and reports — from simple logs to formula-driven automation.</p>
+          <div class="svc-tags"><span>Excel</span><span>Google Sheets</span></div>
         </div>
-        <div class="service-card reveal">
-          <div class="service-icon-wrap">📱</div>
+
+        <div class="svc-card">
+          <div class="svc-num">05</div>
+          <div class="svc-icon-big">📱</div>
           <h3>Social Media Management</h3>
           <p>Scheduling posts, engaging with followers, repurposing content, and keeping your brand presence consistent and active across all platforms.</p>
+          <div class="svc-tags"><span>Canva</span><span>Meta</span><span>Buffer</span></div>
         </div>
-        <div class="service-card reveal">
-          <div class="service-icon-wrap">🎬</div>
-          <h3>AI Video Creation</h3>
-          <p>Short-form AI-generated videos for social media using Kling, Topview, Submagic, and CapCut — from raw concept to final polished cut.</p>
+
+        <div class="svc-card">
+          <div class="svc-num">06</div>
+          <div class="svc-icon-big">🖥️</div>
+          <h3>Inbox & Communication</h3>
+          <p>Prioritizing urgent messages, responding on your behalf, scheduling follow-ups, and maintaining a professional communication flow at all times.</p>
+          <div class="svc-tags"><span>Gmail</span><span>Zoom</span><span>Telegram</span></div>
         </div>
-        <div class="service-card reveal">
-          <div class="service-icon-wrap">💻</div>
+
+        <div class="svc-card svc-large svc-dev">
+          <div class="svc-num">07</div>
+          <div class="svc-icon-big">💻</div>
           <h3>Junior Web Development</h3>
-          <p>Building clean, responsive web pages and basic web apps using HTML, CSS, and JavaScript — structured, readable, and optimized for all devices.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TOOLS ===== -->
-  <section id="tools" class="section tools-section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">My Stack</span>
-        <h2 class="section-title">Tools I Use</h2>
-        <p class="section-sub">2024 – Present</p>
-      </div>
-      <div class="carousel-wrapper reveal">
-        <button class="carousel-arrow prev" aria-label="Previous">‹</button>
-        <div class="tools-carousel" id="toolsCarousel">
-          <div class="tool-card"><img src="excel-png.webp" alt="Excel"><span>Excel</span></div>
-          <div class="tool-card"><img src="1409-canva.png" alt="Canva"><span>Canva</span></div>
-          <div class="tool-card"><img src="OIP (1).webp" alt="Google Docs"><span>Google Docs</span></div>
-          <div class="tool-card"><img src="google-sheets-apps-logo-free-png.webp" alt="Google Sheets"><span>Google Sheets</span></div>
-          <div class="tool-card"><img src="gmail-icon-free-png.webp" alt="Gmail"><span>Gmail</span></div>
-          <div class="tool-card"><img src="OIP (2).webp" alt="Zoom"><span>Zoom</span></div>
-          <div class="tool-card"><img src="chatgpt-logo-chat-gpt-icon-on-green-background-free-vector.jpg" alt="ChatGPT"><span>ChatGPT</span></div>
-          <div class="tool-card"><img src="meta-icon-new-facebook-2021-logo-png_seeklogo-424014.png" alt="Meta AI"><span>Meta AI</span></div>
-          <div class="tool-card"><img src="grok-icon.png" alt="Grok"><span>Grok</span></div>
-          <div class="tool-card"><img src="OIP (10).webp" alt="Kling"><span>Kling</span></div>
-          <div class="tool-card"><img src="OIP 11.jpg" alt="Topview"><span>TopView</span></div>
-          <div class="tool-card"><img src="SubMagic.webp" alt="Submagic"><span>SubMagic</span></div>
-          <div class="tool-card"><img src="Capcut.png" alt="Capcut"><span>Capcut</span></div>
-        </div>
-        <button class="carousel-arrow next" aria-label="Next">›</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== EDUCATION ===== -->
-  <section id="education" class="section education-section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Background</span>
-        <h2 class="section-title">Education</h2>
-      </div>
-      <div class="edu-timeline">
-        <div class="edu-item reveal">
-          <div class="edu-icon">🎓</div>
-          <div class="edu-content">
-            <span class="edu-period">2023 – Present</span>
-            <h3>Bachelor of Science in Information Technology</h3>
-            <p class="edu-school">Our Lady Of Lourdes College</p>
-            <p class="edu-detail">Relevant coursework: Database, Comprog, Networking. Currently maintaining a 1.50 GPA.</p>
+          <p>Building clean, responsive web pages and basic web apps using HTML, CSS, and JavaScript — structured, readable, and optimized for all devices. This very portfolio was built from scratch.</p>
+          <div class="svc-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Java</span><span>SQL</span>
           </div>
         </div>
-        <div class="edu-item reveal">
-          <div class="edu-icon">🏫</div>
-          <div class="edu-content">
-            <span class="edu-period">2021 – 2023</span>
-            <h3>Senior High School — STEM Track</h3>
-            <p class="edu-school">Electron College Of Technical Education</p>
-            <p class="edu-detail">Graduated with honors. Key subjects: Physics, Calculus, and Engineering Sciences.</p>
-          </div>
-        </div>
-        <div class="edu-item reveal">
-          <div class="edu-icon">📚</div>
-          <div class="edu-content">
-            <span class="edu-period">2017 – 2021</span>
-            <h3>Junior High School</h3>
-            <p class="edu-school">Gen T. De Leon National High School</p>
-            <p class="edu-detail">Strong foundation in Math, English, and Science.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===== PROCESS ===== -->
-  <section id="process" class="section process-section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">How We Work Together</span>
-        <h2 class="section-title">My 4-Step Process</h2>
-        <p class="section-sub">Clear, transparent, and stress-free from day one.</p>
       </div>
-      <div class="steps-grid">
-        <div class="step-card reveal">
-          <div class="step-num">01</div>
-          <h3>Initial Discussion</h3>
-          <p>A free 15–40 min conversation (email, Telegram, or Zoom). I listen closely to understand your tasks, goals, tools, timeline, and budget — zero obligation.</p>
+
+      <!-- PROCESS -->
+      <div class="page-header reveal" style="margin-top: 100px;">
+        <span class="pill-tag">How We Work</span>
+        <h2 class="page-title">My 4-Step Process</h2>
+        <p class="page-sub">Clear, transparent, and stress-free from day one.</p>
+      </div>
+      <div class="process-track reveal">
+        <div class="proc-step">
+          <div class="proc-circle">01</div>
+          <div class="proc-line"></div>
+          <h4>Initial Discussion</h4>
+          <p>Free 15–40 min conversation via email, Telegram, or Zoom. I listen to understand your tasks, goals, tools, timeline, and budget — zero obligation.</p>
         </div>
-        <div class="step-card reveal">
-          <div class="step-num">02</div>
-          <h3>Planning & Agreement</h3>
+        <div class="proc-step">
+          <div class="proc-circle">02</div>
+          <div class="proc-line"></div>
+          <h4>Planning & Agreement</h4>
           <p>I send a clear proposal: exact services, estimated hours, update frequency, rate, and start date. We agree in writing before any paid work begins.</p>
         </div>
-        <div class="step-card reveal">
-          <div class="step-num">03</div>
-          <h3>Execution & Updates</h3>
+        <div class="proc-step">
+          <div class="proc-circle">03</div>
+          <div class="proc-line"></div>
+          <h4>Execution & Updates</h4>
           <p>I work using your preferred tools and style, with regular progress updates, fast replies, and full transparency. You stay in control at all times.</p>
         </div>
-        <div class="step-card reveal">
-          <div class="step-num">04</div>
-          <h3>Review & Improvement</h3>
+        <div class="proc-step last">
+          <div class="proc-circle">04</div>
+          <h4>Review & Improvement</h4>
           <p>After each batch, we review together. You share feedback, I adjust immediately — no extra charge. We then decide next steps together.</p>
         </div>
       </div>
-      <div class="process-cta reveal">
-        <p>Ready to reclaim your time?</p>
-        <a href="https://x.com/percyvillii" class="btn btn-primary btn-lg">Let's Get Started →</a>
-      </div>
+
     </div>
-  </section>
+  </section><!-- /services -->
+
+  <!-- ===== PAGE: TOOLS ===== -->
+  <section id="tools" class="page">
+    <div class="container">
+      <div class="page-header reveal">
+        <span class="pill-tag">My Stack</span>
+        <h2 class="page-title">Tools I Use</h2>
+        <p class="page-sub">2024 – Present · 16 tools and counting</p>
+      </div>
+
+      <!-- Category: Productivity -->
+      <div class="tools-category reveal">
+        <h3 class="tools-cat-title"><span>🗂️</span> Productivity & Admin</h3>
+        <div class="tools-row">
+          <div class="tc"><img src="excel-png.webp" alt="Excel" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect width=%2250%22 height=%2250%22 rx=%228%22 fill=%22%23217346%22/><text y=%2235%22 x=%228%22 font-size=%2226%22 fill=%22white%22>X</text></svg>'"><span>Excel</span></div>
+          <div class="tc"><img src="1409-canva.png" alt="Canva" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect width=%2250%22 height=%2250%22 rx=%228%22 fill=%22%2300C4CC%22/><text y=%2235%22 x=%228%22 font-size=%2226%22 fill=%22white%22>C</text></svg>'"><span>Canva</span></div>
+          <div class="tc"><img src="OIP (1).webp" alt="Google Docs" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect width=%2250%22 height=%2250%22 rx=%228%22 fill=%22%234285F4%22/><text y=%2235%22 x=%228%22 font-size=%2226%22 fill=%22white%22>D</text></svg>'"><span>Google Docs</span></div>
+          <div class="tc"><img src="google-sheets-apps-logo-free-png.webp" alt="Google Sheets" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect width=%2250%22 height=%2250%22 rx=%228%22 fill=%22%230F9D58%22/><text y=%2235%22 x=%228%22 font-size=%2226%22 fill=%22white%22>S</text></svg>'"><span>Google Sheets</span></div>
+          <div class="tc"><img src="gmail-icon-free-png.webp" alt="Gmail" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect width=%2250%22 height=%2250%22 rx=%228%22 fill=%22%23EA4335%22/><text y=%2235%22 x=%228%22 font-size=%2226%22 fill=%22white%22>G</text></svg>'"><span>Gmail</span></div>
+          <div class="tc"><img src="OIP (2).webp" alt="Zoom" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect width=%2250%22 height=%2250%22 rx=%228%22 fill=%22%232D8CFF%22/><text y=%2235%22 x=%228%22 font-size=%2226%22 fill=%22white%22>Z</text></svg>'"><span>Zoom</span></div>
+          <!-- SLOT 1 — Add your new tool here -->
+          <div class="tc tc-empty" title="Add tool here">
+            <span class="tc-plus">+</span>
+            <span>Your Tool</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: AI -->
+      <div class="tools-category reveal">
+        <h3 class="tools-cat-title"><span>🤖</span> AI Assistants</h3>
+        <div class="tools-row">
+          <div class="tc"><img src="chatgpt-logo-chat-gpt-icon-on-green-background-free-vector.jpg" alt="ChatGPT" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect width=%2250%22 height=%2250%22 rx=%228%22 fill=%22%2310A37F%22/><text y=%2235%22 x=%228%22 font-size=%2226%22 fill=%22white%22>G</text></svg>'"><span>ChatGPT</span></div>
+          <div class="tc"><img src="meta-icon-new-facebook-2021-logo-png_seeklogo-424014.png" alt="Meta AI" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect width=%2250%22 height=%2250%22 rx=%228%22 fill=%22%230866FF%22/><text y=%2235%22 x=%228%22 font-size=%2226%22 fill=%22white%22>M</text></svg>'"><span>Meta AI</span></div>
+          <div class="tc"><img src="grok-icon.png" alt="Grok" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect width=%2250%22 height=%2250%22 rx=%228%22 fill=%22%23111%22/><text y=%2235%22 x=%228%22 font-size=%2226%22 fill=%22white%22>G</text></svg>'"><span>Grok</span></div>
+          <!-- SLOT 2 — Add your new tool here -->
+          <div class="tc tc-empty" title="Add tool here">
+            <span class="tc-plus">+</span>
+            <span>Your Tool</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Video -->
+      <div class="tools-category reveal">
+        <h3 class="tools-cat-title"><span>🎬</span> Video Creation</h3>
+        <div class="tools-row">
+          <div class="tc"><img src="OIP (10).webp" alt="Kling" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect width=%2250%22 height=%2250%22 rx=%228%22 fill=%22%23333%22/><text y=%2235%22 x=%228%22 font-size=%2226%22 fill=%22white%22>K</text></svg>'"><span>Kling</span></div>
+          <div class="tc"><img src="OIP 11.jpg" alt="Topview" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect width=%2250%22 height=%2250%22 rx=%228%22 fill=%22%23FF4500%22/><text y=%2235%22 x=%228%22 font-size=%2226%22 fill=%22white%22>T</text></svg>'"><span>TopView</span></div>
+          <div class="tc"><img src="SubMagic.webp" alt="Submagic" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect width=%2250%22 height=%2250%22 rx=%228%22 fill=%22%236C3DE0%22/><text y=%2235%22 x=%228%22 font-size=%2226%22 fill=%22white%22>S</text></svg>'"><span>SubMagic</span></div>
+          <div class="tc"><img src="Capcut.png" alt="Capcut" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect width=%2250%22 height=%2250%22 rx=%228%22 fill=%22%23000%22/><text y=%2235%22 x=%228%22 font-size=%2226%22 fill=%22white%22>C</text></svg>'"><span>CapCut</span></div>
+          <!-- SLOT 3 — Add your new tool here -->
+          <div class="tc tc-empty" title="Add tool here">
+            <span class="tc-plus">+</span>
+            <span>Your Tool</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- /tools -->
+
+  <!-- ===== PAGE: EDUCATION ===== -->
+  <section id="education" class="page">
+    <div class="container">
+      <div class="page-header reveal">
+        <span class="pill-tag">Background</span>
+        <h2 class="page-title">Education</h2>
+        <p class="page-sub">Building a strong technical foundation one semester at a time.</p>
+      </div>
+
+      <div class="edu-wrap">
+        <div class="edu-card edu-current reveal">
+          <div class="edu-year-badge">2023 – Present</div>
+          <div class="edu-top">
+            <span class="edu-emoji">🎓</span>
+            <div class="edu-status-dot active-dot"></div>
+          </div>
+          <h3>Bachelor of Science in Information Technology</h3>
+          <p class="edu-school">Our Lady Of Lourdes College</p>
+          <p class="edu-detail">Relevant coursework: Database, Comprog, Networking. Currently maintaining a <strong>1.50 GPA</strong>.</p>
+          <div class="edu-courses">
+            <span>Database Systems</span>
+            <span>Computer Programming</span>
+            <span>Networking</span>
+            <span>Web Development</span>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-year-badge">2021 – 2023</div>
+          <div class="edu-top">
+            <span class="edu-emoji">🏫</span>
+          </div>
+          <h3>Senior High School — STEM Track</h3>
+          <p class="edu-school">Electron College Of Technical Education</p>
+          <p class="edu-detail">Graduated with honors.</p>
+          <div class="edu-courses">
+            <span>Physics</span>
+            <span>Calculus</span>
+            <span>Engineering Sciences</span>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-year-badge">2017 – 2021</div>
+          <div class="edu-top">
+            <span class="edu-emoji">📚</span>
+          </div>
+          <h3>Junior High School</h3>
+          <p class="edu-school">Gen T. De Leon National High School</p>
+          <p class="edu-detail">Strong foundation in Math, English, and Science.</p>
+          <div class="edu-courses">
+            <span>Mathematics</span>
+            <span>English</span>
+            <span>Science</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- /education -->
+
+  <!-- ===== PAGE: CONTACT ===== -->
+  <section id="contact" class="page">
+    <div class="container">
+      <div class="page-header reveal">
+        <span class="pill-tag">Get In Touch</span>
+        <h2 class="page-title">Let's Work Together</h2>
+        <p class="page-sub">Ready to reclaim your time? Let's talk.</p>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="contact-left reveal">
+          <div class="contact-info-block">
+            <h3>Reach me directly</h3>
+            <div class="contact-links">
+              <a href="https://x.com/percyvillii" target="_blank" class="contact-link-item">
+                <span class="cli-icon">𝕏</span>
+                <div>
+                  <span class="cli-label">Twitter / X</span>
+                  <span class="cli-val">@percyvillii</span>
+                </div>
+              </a>
+              <a href="https://www.facebook.com/share/1GWirLEnjt/" target="_blank" class="contact-link-item">
+                <span class="cli-icon">f</span>
+                <div>
+                  <span class="cli-label">Facebook</span>
+                  <span class="cli-val">James Federipe</span>
+                </div>
+              </a>
+              <a href="https://t.me/percyvilli" target="_blank" class="contact-link-item">
+                <span class="cli-icon">✈</span>
+                <div>
+                  <span class="cli-label">Telegram</span>
+                  <span class="cli-val">@percyvilli</span>
+                </div>
+              </a>
+              <a href="https://www.instagram.com/federipejames?igsh=MWJncTBiNDQ0ZjkwYg==" target="_blank" class="contact-link-item">
+                <span class="cli-icon">◎</span>
+                <div>
+                  <span class="cli-label">Instagram</span>
+                  <span class="cli-val">@federipejames</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="availability-card reveal">
+            <div class="avail-header">
+              <span class="avail-dot"></span>
+              <span>Available for new clients</span>
+            </div>
+            <p>Based in the Philippines · Works globally · Remote-only</p>
+            <div class="avail-tags">
+              <span>Virtual Assistant</span>
+              <span>AI Video</span>
+              <span>Web Dev</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-right reveal">
+          <div class="contact-cta-card">
+            <h3>Start with a free call</h3>
+            <p>A free 15–40 min conversation — email, Telegram, or Zoom. I'll listen closely to understand your tasks, goals, timeline, and budget with zero obligation.</p>
+            <a href="https://t.me/percyvilli" target="_blank" class="btn btn-primary btn-xl">
+              <span>Message on Telegram</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://x.com/percyvillii" target="_blank" class="btn btn-outline">DM on Twitter / X</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- /contact -->
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer-inner">
       <span class="footer-logo">James Federipe<span class="dot">.</span></span>
-      <p class="footer-copy">© 2026 James Federipe. All rights reserved.</p>
+      <p class="footer-copy">© 2026 James Federipe. All rights reserved. Built from scratch.</p>
       <div class="footer-socials">
         <a href="https://x.com/percyvillii" target="_blank" aria-label="Twitter">𝕏</a>
         <a href="https://www.facebook.com/share/1GWirLEnjt/" target="_blank" aria-label="Facebook">f</a>
