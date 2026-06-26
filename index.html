@@ -16,41 +16,42 @@
   <!-- ===== NOISE OVERLAY ===== -->
   <div class="noise-overlay" aria-hidden="true"></div>
 
-  <!-- ===== MOBILE SIDEBAR BACKDROP ===== -->
+  <!-- ===== MOBILE MENU BACKDROP ===== -->
   <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
 
-  <!-- ===== SIDEBAR ===== -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-head">
+  <!-- ===== TOP NAVBAR (vertical/stacked layout) ===== -->
+  <header class="topbar" id="sidebar">
+    <div class="topbar-row">
       <a href="#home" class="side-logo" data-nav="home">JF<span class="dot">.</span></a>
-      <button id="theme-toggle" aria-label="Toggle theme">
-        <svg id="sun-icon" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        <svg id="moon-icon" class="theme-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
+
+      <nav class="side-nav" aria-label="Section navigation">
+        <a href="#home" class="side-link" data-nav="home">Home</a>
+        <a href="#work" class="side-link" data-nav="work">Work</a>
+        <a href="#services" class="side-link" data-nav="services">Services</a>
+        <a href="#tools" class="side-link" data-nav="tools">Tools</a>
+        <a href="#education" class="side-link" data-nav="education">Education</a>
+        <a href="#resume" class="side-link" data-nav="resume">Resume</a>
+        <a href="#contact" class="side-link" data-nav="contact">Contact</a>
+      </nav>
+
+      <div class="topbar-right">
+        <div class="side-status"><span class="status-dot"></span> Available for work</div>
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <svg id="sun-icon" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg id="moon-icon" class="theme-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
     </div>
 
-    <p class="sidebar-tagline">Virtual Assistant · Bookkeeper · AI Video Creator</p>
-
-    <nav class="side-nav" aria-label="Section navigation">
-      <a href="#home" class="side-link" data-nav="home">Home</a>
-      <a href="#work" class="side-link" data-nav="work">Work</a>
-      <a href="#services" class="side-link" data-nav="services">Services</a>
-      <a href="#tools" class="side-link" data-nav="tools">Tools</a>
-      <a href="#education" class="side-link" data-nav="education">Education</a>
-      <a href="#resume" class="side-link" data-nav="resume">Resume</a>
-      <a href="#contact" class="side-link" data-nav="contact">Contact</a>
-    </nav>
-
-    <div class="sidebar-foot">
-      <div class="side-status"><span class="status-dot"></span> Available for work</div>
+    <div class="topbar-mobile-extra">
       <div class="side-socials">
         <a href="https://x.com/percyvillii" target="_blank" aria-label="Twitter / X">𝕏</a>
         <a href="https://www.facebook.com/share/1GWirLEnjt/" target="_blank" aria-label="Facebook">f</a>
-        <a href="https://t.me/percyvilli" target="_blank" aria-label="Telegram">✈</a>
+        <a href="https://wa.me/000000000000" target="_blank" aria-label="WhatsApp">🟢</a>
         <a href="https://www.instagram.com/federipejames?igsh=MWJncTBiNDQ0ZjkwYg==" target="_blank" aria-label="Instagram">◎</a>
       </div>
     </div>
-  </aside>
+  </header>
 
   <button class="hamburger" id="hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -89,7 +90,7 @@
             <div class="social-row reveal">
               <a href="https://x.com/percyvillii" target="_blank" class="social-pill" aria-label="Twitter / X">𝕏 Twitter</a>
               <a href="https://www.facebook.com/share/1GWirLEnjt/" target="_blank" class="social-pill" aria-label="Facebook">Facebook</a>
-              <a href="https://t.me/percyvilli" target="_blank" class="social-pill" aria-label="Telegram">Telegram</a>
+              <a href="https://wa.me/000000000000" target="_blank" class="social-pill" aria-label="WhatsApp">WhatsApp</a>
               <a href="https://www.instagram.com/federipejames?igsh=MWJncTBiNDQ0ZjkwYg==" target="_blank" class="social-pill" aria-label="Instagram">Instagram</a>
             </div>
           </div>
@@ -97,7 +98,7 @@
           <div class="hero-right reveal">
             <div class="hero-card-img">
               <div class="img-frame">
-                <img src="james.jpg" alt="James Federipe" class="hero-photo" onerror="this.style.background='linear-gradient(135deg,#6c3de0,#c8722a)';this.style.minHeight='380px'">
+                <img src="james.jpg" alt="James Federipe" class="hero-photo" onerror="this.style.background='linear-gradient(135deg,#0d9488,#7c3aed)';this.style.minHeight='380px'">
               </div>
               <div class="floating-tag tag-1">📒 Books</div>
               <div class="floating-tag tag-2">🎬 AI Video</div>
@@ -151,15 +152,17 @@
               <span class="tp">Zoho Books</span>
               <span class="tp">Google Sheets</span>
               <span class="tp">Excel</span>
+              <span class="tp">Claude AI</span>
             </div>
           </div>
           <p class="work-desc">
-            Managing client finances end-to-end using Zoho Books — from reviewing raw invoices and bank statements to categorizing every transaction and producing clean monthly reports that give business owners a clear picture of their financial health.
+            Managing client finances end-to-end using Zoho Books — from reviewing raw invoices and bank statements to categorizing every transaction and producing clean monthly reports that give business owners a clear picture of their financial health. I also use Claude AI to help draft client-facing financial summaries and double-check categorization logic.
           </p>
           <ul class="work-list">
             <li>Received and reviewed client-uploaded invoices and bank transaction histories</li>
             <li>Categorized transactions using the Chart of Accounts — income, expenses, assets, liabilities — ensuring accuracy across all entries</li>
             <li>Generated monthly financial reports (P&amp;L, expense summaries) so clients could track performance at a glance</li>
+            <li>Used Claude AI to summarize reports in plain language and sanity-check entries before client handoff</li>
             <li>Maintained organized records so books were always audit-ready and easy to hand off to accountants</li>
           </ul>
 
@@ -423,7 +426,7 @@
             <div class="svc-icon-big">📒</div>
             <h3>Bookkeeping</h3>
             <p>Keeping your books clean and your finances clear. I review invoices and bank statements, categorize transactions using the chart of accounts, and deliver monthly financial reports — so you always know where your money stands.</p>
-            <div class="svc-tags"><span>Zoho Books</span><span>Excel</span><span>Google Sheets</span></div>
+            <div class="svc-tags"><span>Zoho Books</span><span>Excel</span><span>Google Sheets</span><span>Claude AI</span></div>
           </div>
 
           <div class="svc-card">
@@ -473,7 +476,7 @@
             <div class="svc-icon-big">🖥️</div>
             <h3>Inbox & Communication</h3>
             <p>Prioritizing urgent messages, responding on your behalf, scheduling follow-ups, and maintaining a professional communication flow at all times.</p>
-            <div class="svc-tags"><span>Gmail</span><span>Zoom</span><span>Telegram</span></div>
+            <div class="svc-tags"><span>Gmail</span><span>Zoom</span><span>WhatsApp</span></div>
           </div>
 
           <div class="svc-card svc-large svc-dev">
@@ -499,7 +502,7 @@
             <div class="proc-circle">01</div>
             <div class="proc-line"></div>
             <h4>Start a Chat</h4>
-            <p>Message me on Telegram, email, or X — no call required. I listen to understand your tasks, goals, tools, timeline, and budget. Zero obligation.</p>
+            <p>Message me on WhatsApp, email, or X — no call required. I listen to understand your tasks, goals, tools, timeline, and budget. Zero obligation.</p>
           </div>
           <div class="proc-step">
             <div class="proc-circle">02</div>
@@ -546,6 +549,7 @@
             </div>
             <div class="tc"><img src="google-sheets-apps-logo-free-png.webp" alt="Google Sheets"><span>Google Sheets</span></div>
             <div class="tc"><img src="excel-png.webp" alt="Excel"><span>Excel</span></div>
+            <div class="tc"><img src="claude-ai-icon.webp" alt="Claude AI"><span>Claude AI</span></div>
             <div class="tc tc-empty" title="Add tool here">
               <span class="tc-plus">+</span>
               <span>Your Tool</span>
@@ -751,7 +755,7 @@
                       <span class="tl-period">2025 – Present</span>
                     </div>
                     <span class="tl-company">Freelance / Remote Clients</span>
-                    <p class="tl-desc">Managed client finances in Zoho Books — reviewed invoices and bank statements, categorized transactions via chart of accounts, and delivered monthly financial reports.</p>
+                    <p class="tl-desc">Managed client finances in Zoho Books — reviewed invoices and bank statements, categorized transactions via chart of accounts, used Claude AI for report summaries, and delivered monthly financial reports.</p>
                   </div>
                 </div>
 
@@ -847,10 +851,8 @@
                 <!-- Twitter / X -->
                 <a href="https://x.com/percyvillii" target="_blank" class="contact-link-item">
                   <div class="cli-logo-wrap">
-                    <!-- Placeholder: replace with your X / Twitter logo image -->
-                    <img src="x-twitter-logo.png" alt="X Twitter"
-                      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                    <span class="cli-fallback" style="display:none;">𝕏</span>
+                    <!-- Add your X / Twitter logo image here -->
+                    <img src="x-twitter-logo.png" alt="X Twitter">
                   </div>
                   <div>
                     <span class="cli-label">Twitter / X</span>
@@ -862,10 +864,8 @@
                 <!-- Facebook -->
                 <a href="https://www.facebook.com/share/1GWirLEnjt/" target="_blank" class="contact-link-item">
                   <div class="cli-logo-wrap">
-                    <!-- Placeholder: replace with your Facebook logo image -->
-                    <img src="facebook-logo.png" alt="Facebook"
-                      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                    <span class="cli-fallback" style="display:none;">f</span>
+                    <!-- Add your Facebook logo image here -->
+                    <img src="facebook-logo.png" alt="Facebook">
                   </div>
                   <div>
                     <span class="cli-label">Facebook</span>
@@ -874,17 +874,15 @@
                   <svg class="cli-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
 
-                <!-- Telegram -->
-                <a href="https://t.me/percyvilli" target="_blank" class="contact-link-item">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/000000000000" target="_blank" class="contact-link-item">
                   <div class="cli-logo-wrap">
-                    <!-- Placeholder: replace with your Telegram logo image -->
-                    <img src="telegram-logo.png" alt="Telegram"
-                      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                    <span class="cli-fallback" style="display:none;">✈</span>
+                    <!-- Add your WhatsApp logo image here -->
+                    <img src="whatsapp-logo.png" alt="WhatsApp">
                   </div>
                   <div>
-                    <span class="cli-label">Telegram</span>
-                    <span class="cli-val">@percyvilli</span>
+                    <span class="cli-label">WhatsApp</span>
+                    <span class="cli-val">Message me</span>
                   </div>
                   <svg class="cli-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
@@ -892,10 +890,8 @@
                 <!-- Instagram -->
                 <a href="https://www.instagram.com/federipejames?igsh=MWJncTBiNDQ0ZjkwYg==" target="_blank" class="contact-link-item">
                   <div class="cli-logo-wrap">
-                    <!-- Placeholder: replace with your Instagram logo image -->
-                    <img src="instagram-logo.png" alt="Instagram"
-                      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                    <span class="cli-fallback" style="display:none;">◎</span>
+                    <!-- Add your Instagram logo image here -->
+                    <img src="instagram-logo.png" alt="Instagram">
                   </div>
                   <div>
                     <span class="cli-label">Instagram</span>
@@ -925,9 +921,9 @@
           <div class="contact-right reveal">
             <div class="contact-cta-card">
               <h3>Start a chat</h3>
-              <p>No calls, no pressure — just message me on Telegram or X. I'll listen closely to understand your tasks, goals, timeline, and budget, and reply as soon as I can.</p>
-              <a href="https://t.me/percyvilli" target="_blank" class="btn btn-primary btn-xl">
-                <span>Chat on Telegram</span>
+              <p>No calls, no pressure — just message me on WhatsApp or X. I'll listen closely to understand your tasks, goals, timeline, and budget, and reply as soon as I can.</p>
+              <a href="https://wa.me/000000000000" target="_blank" class="btn btn-primary btn-xl">
+                <span>Chat on WhatsApp</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
               <a href="https://x.com/percyvillii" target="_blank" class="btn btn-outline">DM on Twitter / X</a>
@@ -946,7 +942,7 @@
         <div class="footer-socials">
           <a href="https://x.com/percyvillii" target="_blank" aria-label="Twitter">𝕏</a>
           <a href="https://www.facebook.com/share/1GWirLEnjt/" target="_blank" aria-label="Facebook">f</a>
-          <a href="https://t.me/percyvilli" target="_blank" aria-label="Telegram">✈</a>
+          <a href="https://wa.me/000000000000" target="_blank" aria-label="WhatsApp">🟢</a>
           <a href="https://www.instagram.com/federipejames?igsh=MWJncTBiNDQ0ZjkwYg==" target="_blank" aria-label="Instagram">◎</a>
         </div>
       </div>
