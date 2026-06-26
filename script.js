@@ -1,5 +1,5 @@
 /* ===================================================
-   JAMES FEDERIPE — PORTFOLIO JS v2
+   JAMES FEDERIPE — PORTFOLIO JS v3
 =================================================== */
 
 /* ===== THEME ===== */
@@ -37,10 +37,7 @@ if (toggle) {
 /* ===== CUSTOM CURSOR ===== */
 const cursorDot  = document.getElementById('cursorDot');
 const cursorRing = document.getElementById('cursorRing');
-
-let mouseX = 0, mouseY = 0;
-let ringX  = 0, ringY  = 0;
-let rafId  = null;
+let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0, rafId = null;
 
 if (cursorDot && cursorRing) {
   document.addEventListener('mousemove', (e) => {
@@ -59,25 +56,19 @@ if (cursorDot && cursorRing) {
     rafId = requestAnimationFrame(animateRing);
   }
 
-  // Hover state on interactive elements
-  const hoverEls = 'a, button, .vid-card, .tc, .svc-card, .edu-card, .work-block, .va-item, .dev-item, .social-pill, .contact-link-item';
+  const hoverEls = 'a, button, .vid-card, .tc, .svc-card, .edu-card, .work-block, .va-item, .dev-item, .social-pill, .contact-link-item, .gloss-item, .resume-section-card, .tl-item';
   document.addEventListener('mouseover', (e) => {
-    if (e.target.closest(hoverEls)) {
-      document.body.classList.add('cursor-hover');
-    }
+    if (e.target.closest(hoverEls)) document.body.classList.add('cursor-hover');
   });
   document.addEventListener('mouseout', (e) => {
-    if (e.target.closest(hoverEls)) {
-      document.body.classList.remove('cursor-hover');
-    }
+    if (e.target.closest(hoverEls)) document.body.classList.remove('cursor-hover');
   });
-
   document.addEventListener('mouseleave', () => {
-    cursorDot.style.opacity  = '0';
+    cursorDot.style.opacity = '0';
     cursorRing.style.opacity = '0';
   });
   document.addEventListener('mouseenter', () => {
-    cursorDot.style.opacity  = '1';
+    cursorDot.style.opacity = '1';
     cursorRing.style.opacity = '1';
   });
 }
@@ -99,26 +90,15 @@ function showPage(id) {
 
   navLinks.forEach(a => {
     const nav = a.getAttribute('data-nav');
-    if (nav === target) {
-      a.classList.add('active');
-    } else {
-      a.classList.remove('active');
-    }
+    a.classList.toggle('active', nav === target);
   });
 
-  // Close mobile menu
   closeMenu();
-
-  // Scroll to top
   window.scrollTo({ top: 0, behavior: 'smooth' });
-
-  // Trigger reveals on new page
   setTimeout(initScrollReveal, 80);
 
-  // Trigger counters on home page
-  if (target === 'home') {
-    setTimeout(initCounters, 200);
-  }
+  if (target === 'home') setTimeout(initCounters, 200);
+  if (target === 'resume') setTimeout(animateSkillBars, 300);
 }
 
 navLinks.forEach(link => {
@@ -129,7 +109,6 @@ navLinks.forEach(link => {
   });
 });
 
-// Also catch in-page CTA links (btn href="#work" etc.)
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   if (!link.classList.contains('nav-link') && !link.classList.contains('mob-link')) {
     link.addEventListener('click', (e) => {
@@ -158,12 +137,10 @@ hamburger.addEventListener('click', () => {
 });
 
 document.addEventListener('click', (e) => {
-  if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
-    closeMenu();
-  }
+  if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) closeMenu();
 });
 
-/* ===== VIDEO: MUTUAL EXCLUSION — ONE PLAYS AT A TIME ===== */
+/* ===== VIDEO: MUTUAL EXCLUSION ===== */
 function initVideos() {
   const cards = document.querySelectorAll('.vid-card');
 
@@ -172,10 +149,8 @@ function initVideos() {
     const playBtn = card.querySelector('.vid-play-btn');
     const index   = parseInt(card.getAttribute('data-index'));
     const durEl   = document.getElementById('dur' + index);
-
     if (!video) return;
 
-    // Format duration mm:ss
     function formatDur(secs) {
       const m = Math.floor(secs / 60);
       const s = Math.floor(secs % 60);
@@ -191,19 +166,14 @@ function initVideos() {
     function stopAll() {
       cards.forEach(c => {
         const v = c.querySelector('video');
-        if (v && !v.paused) {
-          v.pause();
-          v.currentTime = 0;
-        }
+        if (v && !v.paused) { v.pause(); v.currentTime = 0; }
         c.classList.remove('is-playing');
       });
     }
 
     function playThis() {
       stopAll();
-      video.play().then(() => {
-        card.classList.add('is-playing');
-      }).catch(() => {});
+      video.play().then(() => card.classList.add('is-playing')).catch(() => {});
     }
 
     function pauseThis() {
@@ -213,40 +183,26 @@ function initVideos() {
 
     playBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      if (video.paused) {
-        playThis();
-      } else {
-        pauseThis();
-      }
+      video.paused ? playThis() : pauseThis();
     });
 
-    // Clicking the card overlay (outside the play button) also toggles
     card.addEventListener('click', (e) => {
       if (e.target === playBtn || playBtn.contains(e.target)) return;
-      if (card.classList.contains('is-playing')) {
-        pauseThis();
-      } else {
-        playThis();
-      }
+      card.classList.contains('is-playing') ? pauseThis() : playThis();
     });
 
-    // When video ends, reset state
     video.addEventListener('ended', () => {
       card.classList.remove('is-playing');
       video.currentTime = 0;
     });
 
-    // Update play button icon when paused externally
-    video.addEventListener('pause', () => {
-      card.classList.remove('is-playing');
-    });
+    video.addEventListener('pause', () => card.classList.remove('is-playing'));
   });
 }
 
 /* ===== SCROLL REVEAL ===== */
 function initScrollReveal() {
   const reveals = document.querySelectorAll('.page.active-page .reveal:not(.visible)');
-
   if (!reveals.length) return;
 
   const observer = new IntersectionObserver(
@@ -258,9 +214,7 @@ function initScrollReveal() {
           );
           const idx   = siblings.indexOf(entry.target);
           const delay = Math.min(idx * 80, 400);
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, delay);
+          setTimeout(() => entry.target.classList.add('visible'), delay);
           observer.unobserve(entry.target);
         }
       });
@@ -280,13 +234,24 @@ function initCounters() {
     let current = 0;
     const duration = 1200;
     const step = target / (duration / 16);
-
     function tick() {
       current = Math.min(current + step, target);
       el.textContent = Math.round(current);
       if (current < target) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
+  });
+}
+
+/* ===== SKILL BAR ANIMATION ===== */
+function animateSkillBars() {
+  const fills = document.querySelectorAll('#resume .sk-fill');
+  fills.forEach((fill, i) => {
+    const targetWidth = fill.style.width;
+    fill.style.width = '0';
+    setTimeout(() => {
+      fill.style.width = targetWidth;
+    }, 100 + i * 80);
   });
 }
 
@@ -309,5 +274,5 @@ window.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initNavShadow();
   initVideos();
-  console.log('✅ James Federipe portfolio v2 ready');
+  console.log('✅ James Federipe portfolio v3 ready');
 });
