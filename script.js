@@ -1,5 +1,5 @@
 /* ===================================================
-   JAMES FEDERIPE — PORTFOLIO JS v5
+   JAMES FEDERIPE — PORTFOLIO JS v5.1
 =================================================== */
 
 /* ===== THEME ===== */
@@ -35,7 +35,7 @@ if (toggle) {
 }
 
 /* ===== TOPBAR / MOBILE DROPDOWN ===== */
-const sidebar         = document.getElementById('sidebar'); // now the <header class="topbar">
+const sidebar         = document.getElementById('sidebar');
 const sidebarBackdrop = document.getElementById('sidebarBackdrop');
 const hamburger       = document.getElementById('hamburger');
 
@@ -51,14 +51,10 @@ function closeDrawer() {
   hamburger.classList.remove('active');
 }
 
-if (hamburger) {
-  hamburger.addEventListener('click', () => {
-    sidebar.classList.contains('open') ? closeDrawer() : openDrawer();
-  });
-}
-if (sidebarBackdrop) {
-  sidebarBackdrop.addEventListener('click', closeDrawer);
-}
+if (hamburger) hamburger.addEventListener('click', () => {
+  sidebar.classList.contains('open') ? closeDrawer() : openDrawer();
+});
+if (sidebarBackdrop) sidebarBackdrop.addEventListener('click', closeDrawer);
 
 /* ===== SPA NAVIGATION ===== */
 const pages    = document.querySelectorAll('.page');
@@ -67,13 +63,8 @@ const navLinks = document.querySelectorAll('.side-link');
 function showPage(id) {
   const target = id.replace('#', '');
 
-  pages.forEach(p => {
-    p.classList.toggle('active-page', p.id === target);
-  });
-
-  navLinks.forEach(a => {
-    a.classList.toggle('active', a.getAttribute('data-nav') === target);
-  });
+  pages.forEach(p => p.classList.toggle('active-page', p.id === target));
+  navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('data-nav') === target));
 
   closeDrawer();
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -84,17 +75,16 @@ function showPage(id) {
 }
 
 navLinks.forEach(link => {
-  link.addEventListener('click', (e) => {
+  link.addEventListener('click', e => {
     e.preventDefault();
     const href = link.getAttribute('href') || ('#' + link.getAttribute('data-nav'));
     showPage(href);
   });
 });
 
-/* Any other in-page anchor that points at a page id (hero buttons, etc.) */
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   if (link.classList.contains('side-link')) return;
-  link.addEventListener('click', (e) => {
+  link.addEventListener('click', e => {
     const href = link.getAttribute('href');
     const targetPage = document.getElementById(href.replace('#', ''));
     if (targetPage && targetPage.classList.contains('page')) {
@@ -118,13 +108,12 @@ function initVideos() {
     cards.forEach(c => {
       const v = c.querySelector('video');
       if (v && v !== exceptVideo && !v.paused) {
-        v.pause();
-        v.currentTime = 0;
+        v.pause(); v.currentTime = 0;
       }
     });
   }
 
-  cards.forEach((card) => {
+  cards.forEach(card => {
     const video   = card.querySelector('video');
     const playBtn = card.querySelector('.vid-play-btn');
     const index   = parseInt(card.getAttribute('data-index'), 10);
@@ -132,40 +121,19 @@ function initVideos() {
     if (!video) return;
 
     video.addEventListener('loadedmetadata', () => {
-      if (durEl && video.duration && isFinite(video.duration)) {
+      if (durEl && video.duration && isFinite(video.duration))
         durEl.textContent = formatDur(video.duration);
-      }
     });
-
-    video.addEventListener('play', () => {
-      pauseAllExcept(video);
-      card.classList.add('is-playing');
-    });
-
-    video.addEventListener('pause', () => {
-      card.classList.remove('is-playing');
-    });
-
-    video.addEventListener('ended', () => {
-      video.currentTime = 0;
-      card.classList.remove('is-playing');
-    });
+    video.addEventListener('play',  () => { pauseAllExcept(video); card.classList.add('is-playing'); });
+    video.addEventListener('pause', () => card.classList.remove('is-playing'));
+    video.addEventListener('ended', () => { video.currentTime = 0; card.classList.remove('is-playing'); });
 
     function toggleVid() {
-      if (video.paused) {
-        pauseAllExcept(video);
-        video.play().catch(() => {});
-      } else {
-        video.pause();
-      }
+      if (video.paused) { pauseAllExcept(video); video.play().catch(() => {}); }
+      else video.pause();
     }
-
-    playBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toggleVid();
-    });
-
-    card.addEventListener('click', (e) => {
+    playBtn.addEventListener('click', e => { e.stopPropagation(); toggleVid(); });
+    card.addEventListener('click', e => {
       if (e.target === playBtn || playBtn.contains(e.target)) return;
       toggleVid();
     });
@@ -178,14 +146,13 @@ function initScrollReveal() {
   if (!reveals.length) return;
 
   const observer = new IntersectionObserver(
-    (entries) => {
+    entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const siblings = Array.from(
             entry.target.parentElement.querySelectorAll('.reveal:not(.visible)')
           );
-          const idx   = siblings.indexOf(entry.target);
-          const delay = Math.min(idx * 80, 400);
+          const delay = Math.min(siblings.indexOf(entry.target) * 80, 400);
           setTimeout(() => entry.target.classList.add('visible'), delay);
           observer.unobserve(entry.target);
         }
@@ -199,13 +166,11 @@ function initScrollReveal() {
 
 /* ===== COUNTER ANIMATION ===== */
 function initCounters() {
-  const nums = document.querySelectorAll('.s-num');
-  nums.forEach(el => {
+  document.querySelectorAll('.s-num').forEach(el => {
     const target = parseInt(el.getAttribute('data-count'), 10);
     if (isNaN(target)) return;
     let current = 0;
-    const duration = 1200;
-    const step = target / (duration / 16);
+    const step = target / (1200 / 16);
     function tick() {
       current = Math.min(current + step, target);
       el.textContent = Math.round(current);
@@ -221,9 +186,27 @@ function animateSkillBars() {
   fills.forEach((fill, i) => {
     const targetWidth = fill.style.width;
     fill.style.width = '0';
-    setTimeout(() => {
-      fill.style.width = targetWidth;
-    }, 100 + i * 80);
+    setTimeout(() => { fill.style.width = targetWidth; }, 100 + i * 80);
+  });
+}
+
+/* ===== ORBIT: pause on hover already handled by CSS, but pause ring when card is open ===== */
+function initOrbit() {
+  const imgs = document.querySelectorAll('.orbit-img-wrap');
+  imgs.forEach(img => {
+    img.addEventListener('click', () => {
+      const src = img.querySelector('img');
+      if (!src || src.style.display === 'none') return;
+      // lightbox: open image full-screen
+      const lb = document.createElement('div');
+      lb.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:zoom-out;';
+      const clone = document.createElement('img');
+      clone.src = src.src;
+      clone.style.cssText = 'max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 0 60px rgba(0,0,0,0.8);';
+      lb.appendChild(clone);
+      lb.addEventListener('click', () => lb.remove());
+      document.body.appendChild(lb);
+    });
   });
 }
 
@@ -234,5 +217,6 @@ window.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initCounters();
   initVideos();
-  console.log('✅ James Federipe portfolio v5 ready');
+  initOrbit();
+  console.log('✅ James Federipe portfolio v5.1 ready');
 });
