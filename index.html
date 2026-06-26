@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="color-scheme" content="light dark">
-  <meta name="description" content="James Federipe – Virtual Assistant & AI Video Creator. Helping businesses save time, stay organized, and grow with modern digital tools.">
+  <meta name="description" content="James Federipe – Virtual Assistant, Bookkeeper & AI Video Creator. Helping businesses save time, stay organized, and grow with modern digital tools.">
   <title>James Federipe — Virtual Assistant</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,942 +13,946 @@
 </head>
 <body>
 
-  <!-- ===== CURSOR ===== -->
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
   <!-- ===== NOISE OVERLAY ===== -->
   <div class="noise-overlay" aria-hidden="true"></div>
 
-  <!-- ===== NAV ===== -->
-  <nav id="navbar">
-    <a href="#home" class="nav-logo" data-nav="home">JF<span class="dot">.</span></a>
+  <!-- ===== MOBILE SIDEBAR BACKDROP ===== -->
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
 
-    <div class="nav-center">
-      <a href="#home" class="nav-link" data-nav="home">Home</a>
-      <a href="#work" class="nav-link" data-nav="work">Work</a>
-      <a href="#services" class="nav-link" data-nav="services">Services</a>
-      <a href="#tools" class="nav-link" data-nav="tools">Tools</a>
-      <a href="#education" class="nav-link" data-nav="education">Education</a>
-      <a href="#resume" class="nav-link" data-nav="resume">Resume</a>
-      <a href="#contact" class="nav-link" data-nav="contact">Contact</a>
-    </div>
-
-    <div class="nav-right">
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <a href="#home" class="side-logo" data-nav="home">JF<span class="dot">.</span></a>
       <button id="theme-toggle" aria-label="Toggle theme">
         <svg id="sun-icon" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <svg id="moon-icon" class="theme-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
 
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#home" class="mob-link" data-nav="home">Home</a>
-      <a href="#work" class="mob-link" data-nav="work">Work</a>
-      <a href="#services" class="mob-link" data-nav="services">Services</a>
-      <a href="#tools" class="mob-link" data-nav="tools">Tools</a>
-      <a href="#education" class="mob-link" data-nav="education">Education</a>
-      <a href="#resume" class="mob-link" data-nav="resume">Resume</a>
-      <a href="#contact" class="mob-link" data-nav="contact">Contact</a>
-    </div>
-  </nav>
-
-  <!-- ===== PAGE: HOME ===== -->
-  <section id="home" class="page active-page">
-    <div class="hero-wrap">
-      <div class="hero-grid-bg" aria-hidden="true"></div>
-      <div class="orb orb-1" aria-hidden="true"></div>
-      <div class="orb orb-2" aria-hidden="true"></div>
-      <div class="orb orb-3" aria-hidden="true"></div>
-
-      <div class="hero-inner container">
-        <div class="hero-left">
-          <div class="hero-badge reveal">
-            <span class="badge-dot"></span> Available for work
-          </div>
-          <h1 class="hero-name reveal">
-            James<br><em>Federipe</em>
-          </h1>
-          <p class="hero-sub reveal">Virtual Assistant · AI Video Creator · Junior Developer</p>
-          <p class="hero-bio reveal">
-            College student & tech-forward VA from the Philippines. I blend sharp organizational skills with cutting-edge AI tools to help businesses move faster and create standout content.
-          </p>
-          <div class="hero-actions reveal">
-            <a href="#contact" class="btn btn-primary">
-              <span>Work With Me</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="#work" class="btn btn-outline">See My Work</a>
-          </div>
-          <div class="social-row reveal">
-            <a href="https://x.com/percyvillii" target="_blank" class="social-pill" aria-label="Twitter / X">𝕏 Twitter</a>
-            <a href="https://www.facebook.com/share/1GWirLEnjt/" target="_blank" class="social-pill" aria-label="Facebook">Facebook</a>
-            <a href="https://t.me/percyvilli" target="_blank" class="social-pill" aria-label="Telegram">Telegram</a>
-            <a href="https://www.instagram.com/federipejames?igsh=MWJncTBiNDQ0ZjkwYg==" target="_blank" class="social-pill" aria-label="Instagram">Instagram</a>
-          </div>
-        </div>
-
-        <div class="hero-right reveal">
-          <div class="hero-card-img">
-            <div class="img-frame">
-              <img src="james.jpg" alt="James Federipe" class="hero-photo" onerror="this.style.background='linear-gradient(135deg,#6c3de0,#c8722a)';this.style.minHeight='380px'">
-            </div>
-            <div class="floating-tag tag-1">🎬 AI Video</div>
-            <div class="floating-tag tag-2">💻 Dev</div>
-            <div class="floating-tag tag-3">🖥️ VA</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="stats-bar reveal container">
-        <div class="stat-item">
-          <span class="s-num" data-count="2">0</span><span class="s-unit">+</span>
-          <span class="s-lbl">Years Learning</span>
-        </div>
-        <div class="stat-item">
-          <span class="s-num" data-count="17">0</span><span class="s-unit">+</span>
-          <span class="s-lbl">Tools Mastered</span>
-        </div>
-        <div class="stat-item">
-          <span class="s-num" data-count="8">0</span><span class="s-unit"></span>
-          <span class="s-lbl">Core Services</span>
-        </div>
-        <div class="stat-item">
-          <span class="s-num" data-count="100">0</span><span class="s-unit">%</span>
-          <span class="s-lbl">Remote Ready</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PAGE: WORK ===== -->
-  <section id="work" class="page">
-    <div class="container">
-      <div class="page-header reveal">
-        <span class="pill-tag">Experience</span>
-        <h2 class="page-title">What I've Done</h2>
-        <p class="page-sub">Real projects. Real results. Real growth.</p>
-      </div>
-
-      <!-- AI VIDEO CREATOR -->
-      <div class="work-block reveal">
-        <div class="work-block-label">
-          <span class="role-badge badge-ai">🎬 AI Video Creator</span>
-        </div>
-        <div class="work-block-header">
-          <div>
-            <h3 class="work-title">AI Video Creator & Editor</h3>
-            <p class="work-company">Freelance / Self-Initiated Projects</p>
-            <p class="work-period">February 2026 – Present</p>
-          </div>
-          <div class="tool-pills">
-            <span class="tp">Kling</span>
-            <span class="tp">Topview</span>
-            <span class="tp">Submagic</span>
-            <span class="tp">CapCut</span>
-            <span class="tp">Heygen</span>
-          </div>
-        </div>
-        <p class="work-desc">From concept to final cut — scripting, AI video generation, caption styling, and short-form editing optimized for social media platforms.</p>
-        <ul class="work-list">
-          <li>Produced short-form AI video ads and reels using Kling and Topview powered by Seedance</li>
-          <li>Added animated captions and subtitles with Submagic for accessibility and engagement</li>
-          <li>Edited and polished final videos in CapCut with transitions, music sync, and color grading</li>
-          <li>Delivered content formatted for TikTok, Instagram Reels, and YouTube Shorts</li>
-        </ul>
-
-        <div class="video-section-label">
-          <span>Video Samples</span>
-          <span class="vs-note"> </span>
-        </div>
-        <div class="video-grid" id="videoGrid">
-          <div class="vid-card" data-index="0">
-            <div class="vid-overlay">
-              <button class="vid-play-btn" aria-label="Play video">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </button>
-              <div class="vid-label">Sample 01</div>
-            </div>
-            <video preload="none" poster="thumb1.jpg">
-              <source src="0417(1).mp4" type="video/mp4">
-            </video>
-            <div class="vid-footer">
-              <span>AI Video Ad|UGC · Topview + CapCut</span>
-              <span class="vid-dur" id="dur0"></span>
-            </div>
-          </div>
-
-          <div class="vid-card" data-index="1">
-            <div class="vid-overlay">
-              <button class="vid-play-btn" aria-label="Play video">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </button>
-              <div class="vid-label">Sample 02</div>
-            </div>
-            <video preload="none" poster="thumb2.jpg">
-              <source src="Clip 1 (1).mp4" type="video/mp4">
-            </video>
-            <div class="vid-footer">
-              <span>AI Video Ad|UGC · Topview + Capcut</span>
-              <span class="vid-dur" id="dur1"></span>
-            </div>
-          </div>
-
-          <div class="vid-card" data-index="2">
-            <div class="vid-overlay">
-              <button class="vid-play-btn" aria-label="Play video">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </button>
-              <div class="vid-label">Sample 03</div>
-            </div>
-            <video preload="none" poster="thumb3.jpg">
-              <source src="Video1-Growth Tip.mp4" type="video/mp4">
-            </video>
-            <div class="vid-footer">
-              <span>Growth Tip · Heygen + CapCut</span>
-              <span class="vid-dur" id="dur2"></span>
-            </div>
-          </div>
-
-          <div class="vid-card" data-index="3">
-            <div class="vid-overlay">
-              <button class="vid-play-btn" aria-label="Play video">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </button>
-              <div class="vid-label">Sample 04</div>
-            </div>
-            <video preload="none" poster="thumb4.jpg">
-              <source src="0613.mp4" type="video/mp4">
-            </video>
-            <div class="vid-footer">
-              <span>AI Video Ad · Heygen + CapCut</span>
-              <span class="vid-dur" id="dur3"></span>
-            </div>
-          </div>
-
-          <div class="vid-card" data-index="4">
-            <div class="vid-overlay">
-              <button class="vid-play-btn" aria-label="Play video">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </button>
-              <div class="vid-label">Sample 05</div>
-            </div>
-            <video preload="none" poster="thumb5.jpg">
-              <source src="Video1-Revision.mp4" type="video/mp4">
-            </video>
-            <div class="vid-footer">
-              <span>AI Video Tip · Heygen + CapCut</span>
-              <span class="vid-dur" id="dur4"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- BOOKKEEPING -->
-      <div class="work-block reveal">
-        <div class="work-block-label">
-          <span class="role-badge badge-books">📒 Bookkeeping</span>
-        </div>
-        <div class="work-block-header">
-          <div>
-            <h3 class="work-title">Bookkeeper</h3>
-            <p class="work-company">Freelance / Remote Clients</p>
-            <p class="work-period">2025 – Present</p>
-          </div>
-          <div class="tool-pills">
-            <span class="tp">Zoho Books</span>
-            <span class="tp">Google Sheets</span>
-            <span class="tp">Excel</span>
-          </div>
-        </div>
-        <p class="work-desc">
-          Managing client finances end-to-end using Zoho Books — from reviewing raw invoices and bank statements to categorizing every transaction and producing clean monthly reports that give business owners a clear picture of their financial health.
-        </p>
-        <ul class="work-list">
-          <li>Received and reviewed client-uploaded invoices and bank transaction histories</li>
-          <li>Categorized transactions using the Chart of Accounts — income, expenses, assets, liabilities — ensuring accuracy across all entries</li>
-          <li>Generated monthly financial reports (P&amp;L, expense summaries) so clients could track performance at a glance</li>
-          <li>Maintained organized records so books were always audit-ready and easy to hand off to accountants</li>
-        </ul>
-
-        <!-- Glossary strip -->
-        <div class="books-glossary">
-          <div class="gloss-item">
-            <span class="gloss-icon">📘</span>
-            <div>
-              <h5>Zoho Books</h5>
-              <p>Cloud accounting software for tracking income, expenses, invoices, and generating financial reports.</p>
-            </div>
-          </div>
-          <div class="gloss-item">
-            <span class="gloss-icon">🧾</span>
-            <div>
-              <h5>Invoices & Bank History</h5>
-              <p>Invoices are records of sales or purchases; bank history is the full list of transactions from the client's account.</p>
-            </div>
-          </div>
-          <div class="gloss-item">
-            <span class="gloss-icon">🗂️</span>
-            <div>
-              <h5>Chart of Accounts</h5>
-              <p>A structured list of categories (rent, utilities, sales, payroll, etc.) used to classify transactions so reports are accurate.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- GENERAL VA -->
-      <div class="work-block reveal">
-        <div class="work-block-label">
-          <span class="role-badge badge-va">🖥️ General VA</span>
-        </div>
-        <div class="work-block-header">
-          <div>
-            <h3 class="work-title">General Virtual Assistant</h3>
-            <p class="work-company">Freelance / Remote Clients</p>
-            <p class="work-period">April 2026 – Present</p>
-          </div>
-          <div class="tool-pills">
-            <span class="tp">Google Workspace</span>
-            <span class="tp">Excel</span>
-            <span class="tp">Canva</span>
-            <span class="tp">Gmail</span>
-            <span class="tp">Zoom</span>
-          </div>
-        </div>
-        <p class="work-desc">End-to-end virtual assistance to small business owners and entrepreneurs — handling the day-to-day tasks that eat into their time so they can focus on what matters most.</p>
-        <div class="va-grid">
-          <div class="va-item">
-            <span class="va-icon">💻</span>
-            <h4>Data Entry</h4>
-            <p>Accurate, organized entry using Excel or Google Sheets. Includes data cleaning, error-checking, and tracking tables.</p>
-          </div>
-          <div class="va-item">
-            <span class="va-icon">✉️</span>
-            <h4>Email Management</h4>
-            <p>Full inbox control — sorting, filtering, drafting replies, archiving, and setting up rules so you only see what matters.</p>
-          </div>
-          <div class="va-item">
-            <span class="va-icon">📊</span>
-            <h4>Spreadsheet Management</h4>
-            <p>Building trackers, reports, and dashboards in Excel or Google Sheets — from simple logs to formula-driven automation.</p>
-          </div>
-          <div class="va-item">
-            <span class="va-icon">📱</span>
-            <h4>Social Media Management</h4>
-            <p>Scheduling posts, engaging with followers, repurposing content across platforms, and keeping your brand presence consistent.</p>
-          </div>
-          <div class="va-item">
-            <span class="va-icon">🖥️</span>
-            <h4>Inbox & Communication</h4>
-            <p>Prioritizing urgent messages, responding on your behalf, scheduling follow-ups, and keeping communication timely.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- JUNIOR DEVELOPER -->
-      <div class="work-block reveal">
-        <div class="work-block-label">
-          <span class="role-badge badge-dev">💻 Junior Developer</span>
-        </div>
-        <div class="work-block-header">
-          <div>
-            <h3 class="work-title">Junior Developer</h3>
-            <p class="work-company">Personal Projects / Academic Work</p>
-            <p class="work-period">July 2025 – Present</p>
-          </div>
-          <div class="tool-pills">
-            <span class="tp">Java</span>
-            <span class="tp">SQL</span>
-            <span class="tp">HTML</span>
-            <span class="tp">CSS</span>
-            <span class="tp">JavaScript</span>
-          </div>
-        </div>
-        <p class="work-desc">Building my programming foundation through coursework and hands-on personal projects. I build functional web interfaces, write structured backend logic in Java, and manage relational data with SQL.</p>
-        <div class="dev-grid">
-          <div class="dev-item">
-            <span class="dev-icon">☕</span>
-            <div>
-              <h4>Java</h4>
-              <p>OOP, data structures, console apps, basic algorithms</p>
-            </div>
-          </div>
-          <div class="dev-item">
-            <span class="dev-icon">🗄️</span>
-            <div>
-              <h4>SQL</h4>
-              <p>Queries, joins, aggregates, schema design, CRUD operations</p>
-            </div>
-          </div>
-          <div class="dev-item">
-            <span class="dev-icon">🌐</span>
-            <div>
-              <h4>HTML / CSS</h4>
-              <p>Semantic markup, responsive layouts, Flexbox, Grid, animations</p>
-            </div>
-          </div>
-          <div class="dev-item">
-            <span class="dev-icon">⚡</span>
-            <div>
-              <h4>JavaScript</h4>
-              <p>DOM manipulation, event handling, async basics, localStorage</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== PAGE: SERVICES ===== -->
-  <section id="services" class="page">
-    <div class="container">
-      <div class="page-header reveal">
-        <span class="pill-tag">What I Offer</span>
-        <h2 class="page-title">Core Services</h2>
-        <p class="page-sub">From admin to AI-powered content — all in one place.</p>
-      </div>
-
-      <div class="services-bento reveal">
-
-        <div class="svc-card svc-large">
-          <div class="svc-num">01</div>
-          <div class="svc-icon-big">🎬</div>
-          <h3>AI Video Creation</h3>
-          <p>Short-form AI-generated videos for social media using Kling, Topview, Submagic, and CapCut — from raw concept to final polished cut. Optimized for TikTok, Reels, and Shorts.</p>
-          <div class="svc-tags">
-            <span>Kling</span><span>CapCut</span><span>Submagic</span><span>Topview</span>
-          </div>
-        </div>
-
-        <div class="svc-card">
-          <div class="svc-num">02</div>
-          <div class="svc-icon-big">✉️</div>
-          <h3>Email Management</h3>
-          <p>Full inbox control: sorting, filtering, drafting polished replies, archiving, and setting up rules so you only see what matters.</p>
-          <div class="svc-tags"><span>Gmail</span><span>Google Workspace</span></div>
-        </div>
-
-        <div class="svc-card">
-          <div class="svc-num">03</div>
-          <div class="svc-icon-big">💻</div>
-          <h3>Data Entry</h3>
-          <p>Accurate, organized, and efficient entry using Excel or Google Sheets — with error-checking, formatting, and cleanup included.</p>
-          <div class="svc-tags"><span>Excel</span><span>Google Sheets</span></div>
-        </div>
-
-        <div class="svc-card">
-          <div class="svc-num">04</div>
-          <div class="svc-icon-big">📊</div>
-          <h3>Spreadsheet Management</h3>
-          <p>Building and maintaining trackers, dashboards, and reports — from simple logs to formula-driven automation.</p>
-          <div class="svc-tags"><span>Excel</span><span>Google Sheets</span></div>
-        </div>
-
-        <div class="svc-card">
-          <div class="svc-num">05</div>
-          <div class="svc-icon-big">📱</div>
-          <h3>Social Media Management</h3>
-          <p>Scheduling posts, engaging with followers, repurposing content, and keeping your brand presence consistent and active across all platforms.</p>
-          <div class="svc-tags"><span>Canva</span><span>Meta</span><span>Buffer</span></div>
-        </div>
-
-        <div class="svc-card">
-          <div class="svc-num">06</div>
-          <div class="svc-icon-big">🖥️</div>
-          <h3>Inbox & Communication</h3>
-          <p>Prioritizing urgent messages, responding on your behalf, scheduling follow-ups, and maintaining a professional communication flow at all times.</p>
-          <div class="svc-tags"><span>Gmail</span><span>Zoom</span><span>Telegram</span></div>
-        </div>
-
-        <!-- NEW: BOOKKEEPING -->
-        <div class="svc-card svc-books">
-          <div class="svc-num">07</div>
-          <div class="svc-icon-big">📒</div>
-          <h3>Bookkeeping</h3>
-          <p>Keeping your books clean and your finances clear. I review invoices and bank statements, categorize transactions using the chart of accounts, and deliver monthly financial reports — so you always know where your money stands.</p>
-          <div class="svc-tags"><span>Zoho Books</span><span>Excel</span><span>Google Sheets</span></div>
-        </div>
-
-        <div class="svc-card svc-large svc-dev">
-          <div class="svc-num">08</div>
-          <div class="svc-icon-big">💻</div>
-          <h3>Junior Web Development</h3>
-          <p>Building clean, responsive web pages and basic web apps using HTML, CSS, and JavaScript — structured, readable, and optimized for all devices. This very portfolio was built from scratch.</p>
-          <div class="svc-tags">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Java</span><span>SQL</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- PROCESS -->
-      <div class="page-header reveal" style="margin-top: 100px;">
-        <span class="pill-tag">How We Work</span>
-        <h2 class="page-title">My 4-Step Process</h2>
-        <p class="page-sub">Clear, transparent, and stress-free from day one.</p>
-      </div>
-      <div class="process-track reveal">
-        <div class="proc-step">
-          <div class="proc-circle">01</div>
-          <div class="proc-line"></div>
-          <h4>Initial Discussion</h4>
-          <p>Free 15–40 min conversation via email, Telegram, or Zoom. I listen to understand your tasks, goals, tools, timeline, and budget — zero obligation.</p>
-        </div>
-        <div class="proc-step">
-          <div class="proc-circle">02</div>
-          <div class="proc-line"></div>
-          <h4>Planning & Agreement</h4>
-          <p>I send a clear proposal: exact services, estimated hours, update frequency, rate, and start date. We agree in writing before any paid work begins.</p>
-        </div>
-        <div class="proc-step">
-          <div class="proc-circle">03</div>
-          <div class="proc-line"></div>
-          <h4>Execution & Updates</h4>
-          <p>I work using your preferred tools and style, with regular progress updates, fast replies, and full transparency. You stay in control at all times.</p>
-        </div>
-        <div class="proc-step last">
-          <div class="proc-circle">04</div>
-          <h4>Review & Improvement</h4>
-          <p>After each batch, we review together. You share feedback, I adjust immediately — no extra charge. We then decide next steps together.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== PAGE: TOOLS ===== -->
-  <section id="tools" class="page">
-    <div class="container">
-      <div class="page-header reveal">
-        <span class="pill-tag">My Stack</span>
-        <h2 class="page-title">Tools I Use</h2>
-        <p class="page-sub">2024 – Present · 17 tools and counting</p>
-      </div>
-
-      <!-- Productivity -->
-      <div class="tools-category reveal">
-        <h3 class="tools-cat-title"><span>🗂️</span> Productivity & Admin</h3>
-        <div class="tools-row">
-          <div class="tc"><img src="excel-png.webp" alt="Excel"><span>Excel</span></div>
-          <div class="tc"><img src="1409-canva.png" alt="Canva"><span>Canva</span></div>
-          <div class="tc"><img src="OIP (1).webp" alt="Google Docs"><span>Google Docs</span></div>
-          <div class="tc"><img src="google-sheets-apps-logo-free-png.webp" alt="Google Sheets"><span>Google Sheets</span></div>
-          <div class="tc"><img src="gmail-icon-free-png.webp" alt="Gmail"><span>Gmail</span></div>
-          <div class="tc"><img src="OIP (2).webp" alt="Zoom"><span>Zoom</span></div>
-          <div class="tc"><img src="Adobe_Photoshop_CC_2026_icon.svg.png" alt="Adobe Photoshop"><span>Adobe Photoshop</span></div>
-          <div class="tc tc-empty" title="Add tool here">
-            <span class="tc-plus">+</span>
-            <span>Your Tool</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bookkeeping — NEW CATEGORY -->
-      <div class="tools-category reveal">
-        <h3 class="tools-cat-title"><span>📒</span> Bookkeeping & Finance</h3>
-        <div class="tools-row">
-          <!-- Replace src with your Zoho Books logo file once uploaded -->
-          <div class="tc tc-zoho">
-            <img src="zoho-books.png" alt="Zoho Books"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-            >
-            <!-- Fallback icon shown if image missing -->
-            <span class="tc-fallback-icon" style="display:none;width:52px;height:52px;background:linear-gradient(135deg,#e84d0e,#ff6b35);border-radius:10px;align-items:center;justify-content:center;font-size:1.4rem;font-weight:800;color:white;">Z</span>
-            <span>Zoho Books</span>
-          </div>
-          <div class="tc"><img src="google-sheets-apps-logo-free-png.webp" alt="Google Sheets"><span>Google Sheets</span></div>
-          <div class="tc"><img src="excel-png.webp" alt="Excel"><span>Excel</span></div>
-          <div class="tc tc-empty" title="Add tool here">
-            <span class="tc-plus">+</span>
-            <span>Your Tool</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- AI -->
-      <div class="tools-category reveal">
-        <h3 class="tools-cat-title"><span>🤖</span> AI Assistants</h3>
-        <div class="tools-row">
-          <div class="tc"><img src="chatgpt-logo-chat-gpt-icon-on-green-background-free-vector.jpg" alt="ChatGPT"><span>ChatGPT</span></div>
-          <div class="tc"><img src="meta-icon-new-facebook-2021-logo-png_seeklogo-424014.png" alt="Meta AI"><span>Meta AI</span></div>
-          <div class="tc"><img src="grok-icon.png" alt="Grok"><span>Grok</span></div>
-          <div class="tc"><img src="claude-ai-icon.webp" alt="Claude AI"><span>Claude AI</span></div>
-          <div class="tc tc-empty" title="Add tool here">
-            <span class="tc-plus">+</span>
-            <span>Your Tool</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Video -->
-      <div class="tools-category reveal">
-        <h3 class="tools-cat-title"><span>🎬</span> Video Creation</h3>
-        <div class="tools-row">
-          <div class="tc"><img src="OIP (10).webp" alt="Kling"><span>Kling</span></div>
-          <div class="tc"><img src="OIP 11.jpg" alt="Topview"><span>TopView</span></div>
-          <div class="tc"><img src="SubMagic.webp" alt="Submagic"><span>SubMagic</span></div>
-          <div class="tc"><img src="Capcut.png" alt="Capcut"><span>CapCut</span></div>
-          <div class="tc"><img src="Logo-Heygen.png" alt="Heygen"><span>Heygen AI</span></div>
-          <div class="tc tc-empty" title="Add tool here">
-            <span class="tc-plus">+</span>
-            <span>Your Tool</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== PAGE: EDUCATION ===== -->
-  <section id="education" class="page">
-    <div class="container">
-      <div class="page-header reveal">
-        <span class="pill-tag">Background</span>
-        <h2 class="page-title">Education</h2>
-        <p class="page-sub">Building a strong technical foundation one semester at a time.</p>
-      </div>
-
-      <div class="edu-wrap">
-        <div class="edu-card edu-current reveal">
-          <div class="edu-year-badge">2023 – Present</div>
-          <div class="edu-top">
-            <span class="edu-emoji">🎓</span>
-            <div class="edu-status-dot active-dot"></div>
-          </div>
-          <h3>Bachelor of Science in Information Technology</h3>
-          <p class="edu-school">Our Lady Of Lourdes College</p>
-          <p class="edu-detail">Relevant coursework: Database, Comprog, Networking. Currently maintaining a <strong>1.50 GPA</strong>.</p>
-          <div class="edu-courses">
-            <span>Database Systems</span>
-            <span>Computer Programming</span>
-            <span>Networking</span>
-            <span>Web Development</span>
-          </div>
-        </div>
-
-        <div class="edu-card reveal">
-          <div class="edu-year-badge">2021 – 2023</div>
-          <div class="edu-top">
-            <span class="edu-emoji">🏫</span>
-          </div>
-          <h3>Senior High School — STEM Track</h3>
-          <p class="edu-school">Electron College Of Technical Education</p>
-          <p class="edu-detail">Graduated with Academic Excellence.</p>
-          <div class="edu-courses">
-            <span>Physics</span>
-            <span>Calculus</span>
-            <span>Engineering Sciences</span>
-          </div>
-        </div>
-
-        <div class="edu-card reveal">
-          <div class="edu-year-badge">2017 – 2021</div>
-          <div class="edu-top">
-            <span class="edu-emoji">📚</span>
-          </div>
-          <h3>Junior High School</h3>
-          <p class="edu-school">Gen T. De Leon National High School</p>
-          <p class="edu-detail">Strong foundation in Math, English, and Science.</p>
-          <div class="edu-courses">
-            <span>Mathematics</span>
-            <span>English</span>
-            <span>Science</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== PAGE: RESUME ===== -->
-  <section id="resume" class="page">
-    <div class="container">
-      <div class="page-header reveal">
-        <span class="pill-tag">My Resume</span>
-        <h2 class="page-title">At a Glance</h2>
-        <p class="page-sub">Everything you need to know before we talk.</p>
-      </div>
-
-      <div class="resume-wrap">
-
-        <!-- LEFT: summary + skills -->
-        <div class="resume-left">
-
-          <!-- Download CTA -->
-          <div class="resume-download-card reveal">
-            <div class="rdl-icon">📄</div>
-            <div>
-              <h4>Download Full Resume</h4>
-              <p>PDF · Updated June 2026</p>
-            </div>
-            <!-- Replace href with your actual resume file once uploaded -->
-            <a href="James_Federipe_Resume.pdf" download class="btn btn-primary">
-              <span>Download</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-            </a>
-          </div>
-
-          <!-- Skills -->
-          <div class="resume-section-card reveal">
-            <h3 class="rs-title">Skills</h3>
-            <div class="skill-rows">
-              <div class="skill-row">
-                <span class="sk-label">AI Video Production</span>
-                <div class="sk-bar"><div class="sk-fill" style="width:88%"></div></div>
-              </div>
-              <div class="skill-row">
-                <span class="sk-label">Bookkeeping (Zoho Books)</span>
-                <div class="sk-bar"><div class="sk-fill" style="width:80%"></div></div>
-              </div>
-              <div class="skill-row">
-                <span class="sk-label">Virtual Assistance</span>
-                <div class="sk-bar"><div class="sk-fill" style="width:85%"></div></div>
-              </div>
-              <div class="skill-row">
-                <span class="sk-label">HTML / CSS</span>
-                <div class="sk-bar"><div class="sk-fill" style="width:78%"></div></div>
-              </div>
-              <div class="skill-row">
-                <span class="sk-label">JavaScript</span>
-                <div class="sk-bar"><div class="sk-fill" style="width:60%"></div></div>
-              </div>
-              <div class="skill-row">
-                <span class="sk-label">Java & SQL</span>
-                <div class="sk-bar"><div class="sk-fill" style="width:65%"></div></div>
-              </div>
-              <div class="skill-row">
-                <span class="sk-label">Google Workspace</span>
-                <div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div>
-              </div>
-              <div class="skill-row">
-                <span class="sk-label">Excel / Sheets</span>
-                <div class="sk-bar"><div class="sk-fill" style="width:82%"></div></div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- RIGHT: timeline -->
-        <div class="resume-right">
-
-          <!-- Experience Timeline -->
-          <div class="resume-section-card reveal">
-            <h3 class="rs-title">Experience</h3>
-            <div class="timeline">
-
-              <div class="tl-item">
-                <div class="tl-dot tl-dot-ai"></div>
-                <div class="tl-body">
-                  <div class="tl-meta">
-                    <span class="tl-role">AI Video Creator & Editor</span>
-                    <span class="tl-period">Feb 2026 – Present</span>
-                  </div>
-                  <span class="tl-company">Freelance / Self-Initiated</span>
-                  <p class="tl-desc">Produced AI-generated short-form video ads and reels using Kling, Topview, Heygen, Submagic, and CapCut. Delivered optimized content for TikTok, Reels, and Shorts.</p>
-                </div>
-              </div>
-
-              <div class="tl-item">
-                <div class="tl-dot tl-dot-books"></div>
-                <div class="tl-body">
-                  <div class="tl-meta">
-                    <span class="tl-role">Bookkeeper</span>
-                    <span class="tl-period">2025 – Present</span>
-                  </div>
-                  <span class="tl-company">Freelance / Remote Clients</span>
-                  <p class="tl-desc">Managed client finances in Zoho Books — reviewed invoices and bank statements, categorized transactions via chart of accounts, and delivered monthly financial reports.</p>
-                </div>
-              </div>
-
-              <div class="tl-item">
-                <div class="tl-dot tl-dot-va"></div>
-                <div class="tl-body">
-                  <div class="tl-meta">
-                    <span class="tl-role">General Virtual Assistant</span>
-                    <span class="tl-period">Apr 2026 – Present</span>
-                  </div>
-                  <span class="tl-company">Freelance / Remote Clients</span>
-                  <p class="tl-desc">Handled data entry, email management, spreadsheet builds, social media scheduling, and client communications for small business owners.</p>
-                </div>
-              </div>
-
-              <div class="tl-item">
-                <div class="tl-dot tl-dot-dev"></div>
-                <div class="tl-body">
-                  <div class="tl-meta">
-                    <span class="tl-role">Junior Developer</span>
-                    <span class="tl-period">Jul 2025 – Present</span>
-                  </div>
-                  <span class="tl-company">Personal Projects / Academic</span>
-                  <p class="tl-desc">Built responsive web pages and console apps using HTML, CSS, JavaScript, Java, and SQL. Built this portfolio from scratch.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Education Timeline -->
-          <div class="resume-section-card reveal" style="margin-top:24px;">
-            <h3 class="rs-title">Education</h3>
-            <div class="timeline">
-              <div class="tl-item">
-                <div class="tl-dot tl-dot-edu"></div>
-                <div class="tl-body">
-                  <div class="tl-meta">
-                    <span class="tl-role">BS Information Technology</span>
-                    <span class="tl-period">2023 – Present</span>
-                  </div>
-                  <span class="tl-company">Our Lady Of Lourdes College</span>
-                  <p class="tl-desc">GPA 1.50 · Database, Programming, Networking, Web Development</p>
-                </div>
-              </div>
-              <div class="tl-item">
-                <div class="tl-dot tl-dot-edu"></div>
-                <div class="tl-body">
-                  <div class="tl-meta">
-                    <span class="tl-role">Senior High — STEM</span>
-                    <span class="tl-period">2021 – 2023</span>
-                  </div>
-                  <span class="tl-company">Electron College Of Technical Education</span>
-                  <p class="tl-desc">Graduated with Academic Excellence.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== PAGE: CONTACT ===== -->
-  <section id="contact" class="page">
-    <div class="container">
-      <div class="page-header reveal">
-        <span class="pill-tag">Get In Touch</span>
-        <h2 class="page-title">Let's Work Together</h2>
-        <p class="page-sub">Ready to reclaim your time? Let's talk.</p>
-      </div>
-
-      <div class="contact-wrap">
-        <div class="contact-left reveal">
-          <div class="contact-info-block">
-            <h3>Reach me directly</h3>
-            <div class="contact-links">
-
-              <!-- Twitter / X -->
-              <a href="https://x.com/percyvillii" target="_blank" class="contact-link-item">
-                <div class="cli-logo-wrap">
-                  <!-- Replace src with your X/Twitter logo file -->
-                  <img src="x-twitter-logo.png" alt="X Twitter"
-                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                  <span class="cli-fallback" style="display:none;">𝕏</span>
-                </div>
-                <div>
-                  <span class="cli-label">Twitter / X</span>
-                  <span class="cli-val">@percyvillii</span>
-                </div>
-                <svg class="cli-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-
-              <!-- Facebook -->
-              <a href="https://www.facebook.com/share/1GWirLEnjt/" target="_blank" class="contact-link-item">
-                <div class="cli-logo-wrap">
-                  <!-- Replace src with your Facebook logo file -->
-                  <img src="facebook-logo.png" alt="Facebook"
-                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                  <span class="cli-fallback" style="display:none;">f</span>
-                </div>
-                <div>
-                  <span class="cli-label">Facebook</span>
-                  <span class="cli-val">James Federipe</span>
-                </div>
-                <svg class="cli-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-
-              <!-- Telegram -->
-              <a href="https://t.me/percyvilli" target="_blank" class="contact-link-item">
-                <div class="cli-logo-wrap">
-                  <!-- Replace src with your Telegram logo file -->
-                  <img src="telegram-logo.png" alt="Telegram"
-                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                  <span class="cli-fallback" style="display:none;">✈</span>
-                </div>
-                <div>
-                  <span class="cli-label">Telegram</span>
-                  <span class="cli-val">@percyvilli</span>
-                </div>
-                <svg class="cli-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-
-              <!-- Instagram -->
-              <a href="https://www.instagram.com/federipejames?igsh=MWJncTBiNDQ0ZjkwYg==" target="_blank" class="contact-link-item">
-                <div class="cli-logo-wrap">
-                  <!-- Replace src with your Instagram logo file -->
-                  <img src="instagram-logo.png" alt="Instagram"
-                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                  <span class="cli-fallback" style="display:none;">◎</span>
-                </div>
-                <div>
-                  <span class="cli-label">Instagram</span>
-                  <span class="cli-val">@federipejames</span>
-                </div>
-                <svg class="cli-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-
-            </div>
-          </div>
-
-          <div class="availability-card reveal">
-            <div class="avail-header">
-              <span class="avail-dot"></span>
-              <span>Available for new clients</span>
-            </div>
-            <p>Based in the Philippines · Works globally · Remote-only</p>
-            <div class="avail-tags">
-              <span>Virtual Assistant</span>
-              <span>AI Video</span>
-              <span>Bookkeeping</span>
-              <span>Web Dev</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-right reveal">
-          <div class="contact-cta-card">
-            <h3>Start with a free call</h3>
-            <p>A free 15–40 min conversation — email, Telegram, or Zoom. I'll listen closely to understand your tasks, goals, timeline, and budget with zero obligation.</p>
-            <a href="https://t.me/percyvilli" target="_blank" class="btn btn-primary btn-xl">
-              <span>Message on Telegram</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="https://x.com/percyvillii" target="_blank" class="btn btn-outline">DM on Twitter / X</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span class="footer-logo">James Federipe<span class="dot">.</span></span>
-      <p class="footer-copy">© 2026 James Federipe. All rights reserved. Built from scratch.</p>
-      <div class="footer-socials">
-        <a href="https://x.com/percyvillii" target="_blank" aria-label="Twitter">𝕏</a>
+    <p class="sidebar-tagline">Virtual Assistant · Bookkeeper · AI Video Creator</p>
+
+    <nav class="side-nav" aria-label="Section navigation">
+      <a href="#home" class="side-link" data-nav="home">Home</a>
+      <a href="#work" class="side-link" data-nav="work">Work</a>
+      <a href="#services" class="side-link" data-nav="services">Services</a>
+      <a href="#tools" class="side-link" data-nav="tools">Tools</a>
+      <a href="#education" class="side-link" data-nav="education">Education</a>
+      <a href="#resume" class="side-link" data-nav="resume">Resume</a>
+      <a href="#contact" class="side-link" data-nav="contact">Contact</a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="side-status"><span class="status-dot"></span> Available for work</div>
+      <div class="side-socials">
+        <a href="https://x.com/percyvillii" target="_blank" aria-label="Twitter / X">𝕏</a>
         <a href="https://www.facebook.com/share/1GWirLEnjt/" target="_blank" aria-label="Facebook">f</a>
         <a href="https://t.me/percyvilli" target="_blank" aria-label="Telegram">✈</a>
         <a href="https://www.instagram.com/federipejames?igsh=MWJncTBiNDQ0ZjkwYg==" target="_blank" aria-label="Instagram">◎</a>
       </div>
     </div>
-  </footer>
+  </aside>
+
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-content" id="mainContent">
+
+    <!-- ===== PAGE: HOME ===== -->
+    <section id="home" class="page active-page">
+      <div class="hero-wrap">
+        <div class="hero-grid-bg" aria-hidden="true"></div>
+        <div class="orb orb-1" aria-hidden="true"></div>
+        <div class="orb orb-2" aria-hidden="true"></div>
+        <div class="orb orb-3" aria-hidden="true"></div>
+
+        <div class="hero-inner container">
+          <div class="hero-left">
+            <div class="hero-badge reveal">
+              <span class="badge-dot"></span> Available for work
+            </div>
+            <h1 class="hero-name reveal">
+              James<br><em>Federipe</em>
+            </h1>
+            <p class="hero-sub reveal">Virtual Assistant · Bookkeeper · AI Video Creator</p>
+            <p class="hero-bio reveal">
+              College student & tech-forward VA from the Philippines. I blend sharp organizational skills with cutting-edge AI tools to help businesses move faster and create standout content.
+            </p>
+            <div class="hero-actions reveal">
+              <a href="#contact" class="btn btn-primary" data-nav-link="contact">
+                <span>Start a Chat</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#work" class="btn btn-outline" data-nav-link="work">See My Work</a>
+            </div>
+            <div class="social-row reveal">
+              <a href="https://x.com/percyvillii" target="_blank" class="social-pill" aria-label="Twitter / X">𝕏 Twitter</a>
+              <a href="https://www.facebook.com/share/1GWirLEnjt/" target="_blank" class="social-pill" aria-label="Facebook">Facebook</a>
+              <a href="https://t.me/percyvilli" target="_blank" class="social-pill" aria-label="Telegram">Telegram</a>
+              <a href="https://www.instagram.com/federipejames?igsh=MWJncTBiNDQ0ZjkwYg==" target="_blank" class="social-pill" aria-label="Instagram">Instagram</a>
+            </div>
+          </div>
+
+          <div class="hero-right reveal">
+            <div class="hero-card-img">
+              <div class="img-frame">
+                <img src="james.jpg" alt="James Federipe" class="hero-photo" onerror="this.style.background='linear-gradient(135deg,#6c3de0,#c8722a)';this.style.minHeight='380px'">
+              </div>
+              <div class="floating-tag tag-1">📒 Books</div>
+              <div class="floating-tag tag-2">🎬 AI Video</div>
+              <div class="floating-tag tag-3">🖥️ VA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-bar reveal container">
+          <div class="stat-item">
+            <span class="s-num" data-count="2">0</span><span class="s-unit">+</span>
+            <span class="s-lbl">Years Learning</span>
+          </div>
+          <div class="stat-item">
+            <span class="s-num" data-count="17">0</span><span class="s-unit">+</span>
+            <span class="s-lbl">Tools Mastered</span>
+          </div>
+          <div class="stat-item">
+            <span class="s-num" data-count="8">0</span><span class="s-unit"></span>
+            <span class="s-lbl">Core Services</span>
+          </div>
+          <div class="stat-item">
+            <span class="s-num" data-count="100">0</span><span class="s-unit">%</span>
+            <span class="s-lbl">Remote Ready</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PAGE: WORK ===== -->
+    <section id="work" class="page">
+      <div class="container">
+        <div class="page-header reveal">
+          <span class="pill-tag">Experience</span>
+          <h2 class="page-title">What I've Done</h2>
+          <p class="page-sub">Real projects. Real results. Real growth.</p>
+        </div>
+
+        <!-- BOOKKEEPING -->
+        <div class="work-block reveal">
+          <div class="work-block-label">
+            <span class="role-badge badge-books">📒 Bookkeeping</span>
+          </div>
+          <div class="work-block-header">
+            <div>
+              <h3 class="work-title">Bookkeeper</h3>
+              <p class="work-company">Freelance / Remote Clients</p>
+              <p class="work-period">2025 – Present</p>
+            </div>
+            <div class="tool-pills">
+              <span class="tp">Zoho Books</span>
+              <span class="tp">Google Sheets</span>
+              <span class="tp">Excel</span>
+            </div>
+          </div>
+          <p class="work-desc">
+            Managing client finances end-to-end using Zoho Books — from reviewing raw invoices and bank statements to categorizing every transaction and producing clean monthly reports that give business owners a clear picture of their financial health.
+          </p>
+          <ul class="work-list">
+            <li>Received and reviewed client-uploaded invoices and bank transaction histories</li>
+            <li>Categorized transactions using the Chart of Accounts — income, expenses, assets, liabilities — ensuring accuracy across all entries</li>
+            <li>Generated monthly financial reports (P&amp;L, expense summaries) so clients could track performance at a glance</li>
+            <li>Maintained organized records so books were always audit-ready and easy to hand off to accountants</li>
+          </ul>
+
+          <!-- Glossary strip -->
+          <div class="books-glossary">
+            <div class="gloss-item">
+              <span class="gloss-icon">📘</span>
+              <div>
+                <h5>Zoho Books</h5>
+                <p>Cloud accounting software for tracking income, expenses, invoices, and generating financial reports.</p>
+              </div>
+            </div>
+            <div class="gloss-item">
+              <span class="gloss-icon">🧾</span>
+              <div>
+                <h5>Invoices & Bank History</h5>
+                <p>Invoices are records of sales or purchases; bank history is the full list of transactions from the client's account.</p>
+              </div>
+            </div>
+            <div class="gloss-item">
+              <span class="gloss-icon">🗂️</span>
+              <div>
+                <h5>Chart of Accounts</h5>
+                <p>A structured list of categories (rent, utilities, sales, payroll, etc.) used to classify transactions so reports are accurate.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI VIDEO CREATOR -->
+        <div class="work-block reveal">
+          <div class="work-block-label">
+            <span class="role-badge badge-ai">🎬 AI Video Creator</span>
+          </div>
+          <div class="work-block-header">
+            <div>
+              <h3 class="work-title">AI Video Creator & Editor</h3>
+              <p class="work-company">Freelance / Self-Initiated Projects</p>
+              <p class="work-period">February 2026 – Present</p>
+            </div>
+            <div class="tool-pills">
+              <span class="tp">Kling</span>
+              <span class="tp">Topview</span>
+              <span class="tp">Submagic</span>
+              <span class="tp">CapCut</span>
+              <span class="tp">Heygen</span>
+            </div>
+          </div>
+          <p class="work-desc">From concept to final cut — scripting, AI video generation, caption styling, and short-form editing optimized for social media platforms.</p>
+          <ul class="work-list">
+            <li>Produced short-form AI video ads and reels using Kling and Topview powered by Seedance</li>
+            <li>Added animated captions and subtitles with Submagic for accessibility and engagement</li>
+            <li>Edited and polished final videos in CapCut with transitions, music sync, and color grading</li>
+            <li>Delivered content formatted for TikTok, Instagram Reels, and YouTube Shorts</li>
+          </ul>
+
+          <div class="video-section-label">
+            <span>Video Samples</span>
+            <span class="vs-note">Tap a clip to play — one at a time</span>
+          </div>
+          <div class="video-grid" id="videoGrid">
+            <div class="vid-card" data-index="0">
+              <div class="vid-overlay">
+                <button class="vid-play-btn" aria-label="Play video">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <div class="vid-label">Sample 01</div>
+              </div>
+              <video preload="none" poster="thumb1.jpg" playsinline webkit-playsinline>
+                <source src="0417(1).mp4" type="video/mp4">
+              </video>
+              <div class="vid-footer">
+                <span>AI Video Ad|UGC · Topview + CapCut</span>
+                <span class="vid-dur" id="dur0"></span>
+              </div>
+            </div>
+
+            <div class="vid-card" data-index="1">
+              <div class="vid-overlay">
+                <button class="vid-play-btn" aria-label="Play video">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <div class="vid-label">Sample 02</div>
+              </div>
+              <video preload="none" poster="thumb2.jpg" playsinline webkit-playsinline>
+                <source src="Clip 1 (1).mp4" type="video/mp4">
+              </video>
+              <div class="vid-footer">
+                <span>AI Video Ad|UGC · Topview + Capcut</span>
+                <span class="vid-dur" id="dur1"></span>
+              </div>
+            </div>
+
+            <div class="vid-card" data-index="2">
+              <div class="vid-overlay">
+                <button class="vid-play-btn" aria-label="Play video">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <div class="vid-label">Sample 03</div>
+              </div>
+              <video preload="none" poster="thumb3.jpg" playsinline webkit-playsinline>
+                <source src="Video1-Growth Tip.mp4" type="video/mp4">
+              </video>
+              <div class="vid-footer">
+                <span>Growth Tip · Heygen + CapCut</span>
+                <span class="vid-dur" id="dur2"></span>
+              </div>
+            </div>
+
+            <div class="vid-card" data-index="3">
+              <div class="vid-overlay">
+                <button class="vid-play-btn" aria-label="Play video">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <div class="vid-label">Sample 04</div>
+              </div>
+              <video preload="none" poster="thumb4.jpg" playsinline webkit-playsinline>
+                <source src="0613.mp4" type="video/mp4">
+              </video>
+              <div class="vid-footer">
+                <span>AI Video Ad · Heygen + CapCut</span>
+                <span class="vid-dur" id="dur3"></span>
+              </div>
+            </div>
+
+            <div class="vid-card" data-index="4">
+              <div class="vid-overlay">
+                <button class="vid-play-btn" aria-label="Play video">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <div class="vid-label">Sample 05</div>
+              </div>
+              <video preload="none" poster="thumb5.jpg" playsinline webkit-playsinline>
+                <source src="Video1-Revision.mp4" type="video/mp4">
+              </video>
+              <div class="vid-footer">
+                <span>AI Video Tip · Heygen + CapCut</span>
+                <span class="vid-dur" id="dur4"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GENERAL VA -->
+        <div class="work-block reveal">
+          <div class="work-block-label">
+            <span class="role-badge badge-va">🖥️ General VA</span>
+          </div>
+          <div class="work-block-header">
+            <div>
+              <h3 class="work-title">General Virtual Assistant</h3>
+              <p class="work-company">Freelance / Remote Clients</p>
+              <p class="work-period">April 2026 – Present</p>
+            </div>
+            <div class="tool-pills">
+              <span class="tp">Google Workspace</span>
+              <span class="tp">Excel</span>
+              <span class="tp">Canva</span>
+              <span class="tp">Gmail</span>
+              <span class="tp">Zoom</span>
+            </div>
+          </div>
+          <p class="work-desc">End-to-end virtual assistance to small business owners and entrepreneurs — handling the day-to-day tasks that eat into their time so they can focus on what matters most.</p>
+          <div class="va-grid">
+            <div class="va-item">
+              <span class="va-icon">💻</span>
+              <h4>Data Entry</h4>
+              <p>Accurate, organized entry using Excel or Google Sheets. Includes data cleaning, error-checking, and tracking tables.</p>
+            </div>
+            <div class="va-item">
+              <span class="va-icon">✉️</span>
+              <h4>Email Management</h4>
+              <p>Full inbox control — sorting, filtering, drafting replies, archiving, and setting up rules so you only see what matters.</p>
+            </div>
+            <div class="va-item">
+              <span class="va-icon">📊</span>
+              <h4>Spreadsheet Management</h4>
+              <p>Building trackers, reports, and dashboards in Excel or Google Sheets — from simple logs to formula-driven automation.</p>
+            </div>
+            <div class="va-item">
+              <span class="va-icon">📱</span>
+              <h4>Social Media Management</h4>
+              <p>Scheduling posts, engaging with followers, repurposing content across platforms, and keeping your brand presence consistent.</p>
+            </div>
+            <div class="va-item">
+              <span class="va-icon">🖥️</span>
+              <h4>Inbox & Communication</h4>
+              <p>Prioritizing urgent messages, responding on your behalf, scheduling follow-ups, and keeping communication timely.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- JUNIOR DEVELOPER -->
+        <div class="work-block reveal">
+          <div class="work-block-label">
+            <span class="role-badge badge-dev">💻 Junior Developer</span>
+          </div>
+          <div class="work-block-header">
+            <div>
+              <h3 class="work-title">Junior Developer</h3>
+              <p class="work-company">Personal Projects / Academic Work</p>
+              <p class="work-period">July 2025 – Present</p>
+            </div>
+            <div class="tool-pills">
+              <span class="tp">Java</span>
+              <span class="tp">SQL</span>
+              <span class="tp">HTML</span>
+              <span class="tp">CSS</span>
+              <span class="tp">JavaScript</span>
+            </div>
+          </div>
+          <p class="work-desc">Building my programming foundation through coursework and hands-on personal projects. I build functional web interfaces, write structured backend logic in Java, and manage relational data with SQL.</p>
+          <div class="dev-grid">
+            <div class="dev-item">
+              <span class="dev-icon">☕</span>
+              <div>
+                <h4>Java</h4>
+                <p>OOP, data structures, console apps, basic algorithms</p>
+              </div>
+            </div>
+            <div class="dev-item">
+              <span class="dev-icon">🗄️</span>
+              <div>
+                <h4>SQL</h4>
+                <p>Queries, joins, aggregates, schema design, CRUD operations</p>
+              </div>
+            </div>
+            <div class="dev-item">
+              <span class="dev-icon">🌐</span>
+              <div>
+                <h4>HTML / CSS</h4>
+                <p>Semantic markup, responsive layouts, Flexbox, Grid, animations</p>
+              </div>
+            </div>
+            <div class="dev-item">
+              <span class="dev-icon">⚡</span>
+              <div>
+                <h4>JavaScript</h4>
+                <p>DOM manipulation, event handling, async basics, localStorage</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== PAGE: SERVICES ===== -->
+    <section id="services" class="page">
+      <div class="container">
+        <div class="page-header reveal">
+          <span class="pill-tag">What I Offer</span>
+          <h2 class="page-title">Core Services</h2>
+          <p class="page-sub">From clean books to AI-powered content — all in one place.</p>
+        </div>
+
+        <div class="services-bento reveal">
+
+          <div class="svc-card svc-large svc-books">
+            <div class="svc-num">01</div>
+            <div class="svc-icon-big">📒</div>
+            <h3>Bookkeeping</h3>
+            <p>Keeping your books clean and your finances clear. I review invoices and bank statements, categorize transactions using the chart of accounts, and deliver monthly financial reports — so you always know where your money stands.</p>
+            <div class="svc-tags"><span>Zoho Books</span><span>Excel</span><span>Google Sheets</span></div>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-num">02</div>
+            <div class="svc-icon-big">🎬</div>
+            <h3>AI Video Creation</h3>
+            <p>Short-form AI-generated videos for social media using Kling, Topview, Submagic, and CapCut — from raw concept to final polished cut. Optimized for TikTok, Reels, and Shorts.</p>
+            <div class="svc-tags">
+              <span>Kling</span><span>CapCut</span><span>Submagic</span><span>Topview</span>
+            </div>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-num">03</div>
+            <div class="svc-icon-big">✉️</div>
+            <h3>Email Management</h3>
+            <p>Full inbox control: sorting, filtering, drafting polished replies, archiving, and setting up rules so you only see what matters.</p>
+            <div class="svc-tags"><span>Gmail</span><span>Google Workspace</span></div>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-num">04</div>
+            <div class="svc-icon-big">💻</div>
+            <h3>Data Entry</h3>
+            <p>Accurate, organized, and efficient entry using Excel or Google Sheets — with error-checking, formatting, and cleanup included.</p>
+            <div class="svc-tags"><span>Excel</span><span>Google Sheets</span></div>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-num">05</div>
+            <div class="svc-icon-big">📊</div>
+            <h3>Spreadsheet Management</h3>
+            <p>Building and maintaining trackers, dashboards, and reports — from simple logs to formula-driven automation.</p>
+            <div class="svc-tags"><span>Excel</span><span>Google Sheets</span></div>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-num">06</div>
+            <div class="svc-icon-big">📱</div>
+            <h3>Social Media Management</h3>
+            <p>Scheduling posts, engaging with followers, repurposing content, and keeping your brand presence consistent and active across all platforms.</p>
+            <div class="svc-tags"><span>Canva</span><span>Meta</span><span>Buffer</span></div>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-num">07</div>
+            <div class="svc-icon-big">🖥️</div>
+            <h3>Inbox & Communication</h3>
+            <p>Prioritizing urgent messages, responding on your behalf, scheduling follow-ups, and maintaining a professional communication flow at all times.</p>
+            <div class="svc-tags"><span>Gmail</span><span>Zoom</span><span>Telegram</span></div>
+          </div>
+
+          <div class="svc-card svc-large svc-dev">
+            <div class="svc-num">08</div>
+            <div class="svc-icon-big">💻</div>
+            <h3>Junior Web Development</h3>
+            <p>Building clean, responsive web pages and basic web apps using HTML, CSS, and JavaScript — structured, readable, and optimized for all devices. This very portfolio was built from scratch.</p>
+            <div class="svc-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Java</span><span>SQL</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PROCESS -->
+        <div class="page-header reveal" style="margin-top: 100px;">
+          <span class="pill-tag">How We Work</span>
+          <h2 class="page-title">My 4-Step Process</h2>
+          <p class="page-sub">Clear, transparent, and stress-free from day one.</p>
+        </div>
+        <div class="process-track reveal">
+          <div class="proc-step">
+            <div class="proc-circle">01</div>
+            <div class="proc-line"></div>
+            <h4>Start a Chat</h4>
+            <p>Message me on Telegram, email, or X — no call required. I listen to understand your tasks, goals, tools, timeline, and budget. Zero obligation.</p>
+          </div>
+          <div class="proc-step">
+            <div class="proc-circle">02</div>
+            <div class="proc-line"></div>
+            <h4>Planning & Agreement</h4>
+            <p>I send a clear proposal: exact services, estimated hours, update frequency, rate, and start date. We agree in writing before any paid work begins.</p>
+          </div>
+          <div class="proc-step">
+            <div class="proc-circle">03</div>
+            <div class="proc-line"></div>
+            <h4>Execution & Updates</h4>
+            <p>I work using your preferred tools and style, with regular progress updates, fast replies, and full transparency. You stay in control at all times.</p>
+          </div>
+          <div class="proc-step last">
+            <div class="proc-circle">04</div>
+            <h4>Review & Improvement</h4>
+            <p>After each batch, we review together. You share feedback, I adjust immediately — no extra charge. We then decide next steps together.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== PAGE: TOOLS ===== -->
+    <section id="tools" class="page">
+      <div class="container">
+        <div class="page-header reveal">
+          <span class="pill-tag">My Stack</span>
+          <h2 class="page-title">Tools I Use</h2>
+          <p class="page-sub">2024 – Present · 17 tools and counting</p>
+        </div>
+
+        <!-- Bookkeeping -->
+        <div class="tools-category reveal">
+          <h3 class="tools-cat-title"><span>📒</span> Bookkeeping & Finance</h3>
+          <div class="tools-row">
+            <div class="tc tc-zoho">
+              <!-- Replace src with your Zoho Books logo file once uploaded -->
+              <img src="zoho-books.png" alt="Zoho Books"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              >
+              <span class="tc-fallback-icon" style="display:none;width:52px;height:52px;background:linear-gradient(135deg,#e84d0e,#ff6b35);border-radius:10px;align-items:center;justify-content:center;font-size:1.4rem;font-weight:800;color:white;">Z</span>
+              <span>Zoho Books</span>
+            </div>
+            <div class="tc"><img src="google-sheets-apps-logo-free-png.webp" alt="Google Sheets"><span>Google Sheets</span></div>
+            <div class="tc"><img src="excel-png.webp" alt="Excel"><span>Excel</span></div>
+            <div class="tc tc-empty" title="Add tool here">
+              <span class="tc-plus">+</span>
+              <span>Your Tool</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Productivity -->
+        <div class="tools-category reveal">
+          <h3 class="tools-cat-title"><span>🗂️</span> Productivity & Admin</h3>
+          <div class="tools-row">
+            <div class="tc"><img src="excel-png.webp" alt="Excel"><span>Excel</span></div>
+            <div class="tc"><img src="1409-canva.png" alt="Canva"><span>Canva</span></div>
+            <div class="tc"><img src="OIP (1).webp" alt="Google Docs"><span>Google Docs</span></div>
+            <div class="tc"><img src="google-sheets-apps-logo-free-png.webp" alt="Google Sheets"><span>Google Sheets</span></div>
+            <div class="tc"><img src="gmail-icon-free-png.webp" alt="Gmail"><span>Gmail</span></div>
+            <div class="tc"><img src="OIP (2).webp" alt="Zoom"><span>Zoom</span></div>
+            <div class="tc"><img src="Adobe_Photoshop_CC_2026_icon.svg.png" alt="Adobe Photoshop"><span>Adobe Photoshop</span></div>
+            <div class="tc tc-empty" title="Add tool here">
+              <span class="tc-plus">+</span>
+              <span>Your Tool</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI -->
+        <div class="tools-category reveal">
+          <h3 class="tools-cat-title"><span>🤖</span> AI Assistants</h3>
+          <div class="tools-row">
+            <div class="tc"><img src="chatgpt-logo-chat-gpt-icon-on-green-background-free-vector.jpg" alt="ChatGPT"><span>ChatGPT</span></div>
+            <div class="tc"><img src="meta-icon-new-facebook-2021-logo-png_seeklogo-424014.png" alt="Meta AI"><span>Meta AI</span></div>
+            <div class="tc"><img src="grok-icon.png" alt="Grok"><span>Grok</span></div>
+            <div class="tc"><img src="claude-ai-icon.webp" alt="Claude AI"><span>Claude AI</span></div>
+            <div class="tc tc-empty" title="Add tool here">
+              <span class="tc-plus">+</span>
+              <span>Your Tool</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video -->
+        <div class="tools-category reveal">
+          <h3 class="tools-cat-title"><span>🎬</span> Video Creation</h3>
+          <div class="tools-row">
+            <div class="tc"><img src="OIP (10).webp" alt="Kling"><span>Kling</span></div>
+            <div class="tc"><img src="OIP 11.jpg" alt="Topview"><span>TopView</span></div>
+            <div class="tc"><img src="SubMagic.webp" alt="Submagic"><span>SubMagic</span></div>
+            <div class="tc"><img src="Capcut.png" alt="Capcut"><span>CapCut</span></div>
+            <div class="tc"><img src="Logo-Heygen.png" alt="Heygen"><span>Heygen AI</span></div>
+            <div class="tc tc-empty" title="Add tool here">
+              <span class="tc-plus">+</span>
+              <span>Your Tool</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== PAGE: EDUCATION ===== -->
+    <section id="education" class="page">
+      <div class="container">
+        <div class="page-header reveal">
+          <span class="pill-tag">Background</span>
+          <h2 class="page-title">Education</h2>
+          <p class="page-sub">Building a strong technical foundation one semester at a time.</p>
+        </div>
+
+        <div class="edu-wrap">
+          <div class="edu-card edu-current reveal">
+            <div class="edu-year-badge">2023 – Present</div>
+            <div class="edu-top">
+              <span class="edu-emoji">🎓</span>
+              <div class="edu-status-dot active-dot"></div>
+            </div>
+            <h3>Bachelor of Science in Information Technology</h3>
+            <p class="edu-school">Our Lady Of Lourdes College</p>
+            <p class="edu-detail">Relevant coursework: Database, Comprog, Networking. Currently maintaining a <strong>1.50 GPA</strong>.</p>
+            <div class="edu-courses">
+              <span>Database Systems</span>
+              <span>Computer Programming</span>
+              <span>Networking</span>
+              <span>Web Development</span>
+            </div>
+          </div>
+
+          <div class="edu-card reveal">
+            <div class="edu-year-badge">2021 – 2023</div>
+            <div class="edu-top">
+              <span class="edu-emoji">🏫</span>
+            </div>
+            <h3>Senior High School — STEM Track</h3>
+            <p class="edu-school">Electron College Of Technical Education</p>
+            <p class="edu-detail">Graduated with Academic Excellence.</p>
+            <div class="edu-courses">
+              <span>Physics</span>
+              <span>Calculus</span>
+              <span>Engineering Sciences</span>
+            </div>
+          </div>
+
+          <div class="edu-card reveal">
+            <div class="edu-year-badge">2017 – 2021</div>
+            <div class="edu-top">
+              <span class="edu-emoji">📚</span>
+            </div>
+            <h3>Junior High School</h3>
+            <p class="edu-school">Gen T. De Leon National High School</p>
+            <p class="edu-detail">Strong foundation in Math, English, and Science.</p>
+            <div class="edu-courses">
+              <span>Mathematics</span>
+              <span>English</span>
+              <span>Science</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== PAGE: RESUME ===== -->
+    <section id="resume" class="page">
+      <div class="container">
+        <div class="page-header reveal">
+          <span class="pill-tag">My Resume</span>
+          <h2 class="page-title">At a Glance</h2>
+          <p class="page-sub">Everything you need to know before we talk.</p>
+        </div>
+
+        <div class="resume-wrap">
+
+          <!-- LEFT: summary + skills -->
+          <div class="resume-left">
+
+            <!-- Download CTA -->
+            <div class="resume-download-card reveal">
+              <div class="rdl-icon">📄</div>
+              <div>
+                <h4>Download Full Resume</h4>
+                <p>PDF · Updated June 2026</p>
+              </div>
+              <!-- Replace href with your actual resume file once uploaded -->
+              <a href="James_Federipe_Resume.pdf" download class="btn btn-primary">
+                <span>Download</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+              </a>
+            </div>
+
+            <!-- Skills -->
+            <div class="resume-section-card reveal">
+              <h3 class="rs-title">Skills</h3>
+              <div class="skill-rows">
+                <div class="skill-row">
+                  <span class="sk-label">Bookkeeping (Zoho Books)</span>
+                  <div class="sk-bar"><div class="sk-fill" style="width:80%"></div></div>
+                </div>
+                <div class="skill-row">
+                  <span class="sk-label">AI Video Production</span>
+                  <div class="sk-bar"><div class="sk-fill" style="width:88%"></div></div>
+                </div>
+                <div class="skill-row">
+                  <span class="sk-label">Virtual Assistance</span>
+                  <div class="sk-bar"><div class="sk-fill" style="width:85%"></div></div>
+                </div>
+                <div class="skill-row">
+                  <span class="sk-label">Google Workspace</span>
+                  <div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div>
+                </div>
+                <div class="skill-row">
+                  <span class="sk-label">Excel / Sheets</span>
+                  <div class="sk-bar"><div class="sk-fill" style="width:82%"></div></div>
+                </div>
+                <div class="skill-row">
+                  <span class="sk-label">HTML / CSS</span>
+                  <div class="sk-bar"><div class="sk-fill" style="width:78%"></div></div>
+                </div>
+                <div class="skill-row">
+                  <span class="sk-label">Java & SQL</span>
+                  <div class="sk-bar"><div class="sk-fill" style="width:65%"></div></div>
+                </div>
+                <div class="skill-row">
+                  <span class="sk-label">JavaScript</span>
+                  <div class="sk-bar"><div class="sk-fill" style="width:60%"></div></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: timeline -->
+          <div class="resume-right">
+
+            <!-- Experience Timeline -->
+            <div class="resume-section-card reveal">
+              <h3 class="rs-title">Experience</h3>
+              <div class="timeline">
+
+                <div class="tl-item">
+                  <div class="tl-dot tl-dot-books"></div>
+                  <div class="tl-body">
+                    <div class="tl-meta">
+                      <span class="tl-role">Bookkeeper</span>
+                      <span class="tl-period">2025 – Present</span>
+                    </div>
+                    <span class="tl-company">Freelance / Remote Clients</span>
+                    <p class="tl-desc">Managed client finances in Zoho Books — reviewed invoices and bank statements, categorized transactions via chart of accounts, and delivered monthly financial reports.</p>
+                  </div>
+                </div>
+
+                <div class="tl-item">
+                  <div class="tl-dot tl-dot-ai"></div>
+                  <div class="tl-body">
+                    <div class="tl-meta">
+                      <span class="tl-role">AI Video Creator & Editor</span>
+                      <span class="tl-period">Feb 2026 – Present</span>
+                    </div>
+                    <span class="tl-company">Freelance / Self-Initiated</span>
+                    <p class="tl-desc">Produced AI-generated short-form video ads and reels using Kling, Topview, Heygen, Submagic, and CapCut. Delivered optimized content for TikTok, Reels, and Shorts.</p>
+                  </div>
+                </div>
+
+                <div class="tl-item">
+                  <div class="tl-dot tl-dot-va"></div>
+                  <div class="tl-body">
+                    <div class="tl-meta">
+                      <span class="tl-role">General Virtual Assistant</span>
+                      <span class="tl-period">Apr 2026 – Present</span>
+                    </div>
+                    <span class="tl-company">Freelance / Remote Clients</span>
+                    <p class="tl-desc">Handled data entry, email management, spreadsheet builds, social media scheduling, and client communications for small business owners.</p>
+                  </div>
+                </div>
+
+                <div class="tl-item">
+                  <div class="tl-dot tl-dot-dev"></div>
+                  <div class="tl-body">
+                    <div class="tl-meta">
+                      <span class="tl-role">Junior Developer</span>
+                      <span class="tl-period">Jul 2025 – Present</span>
+                    </div>
+                    <span class="tl-company">Personal Projects / Academic</span>
+                    <p class="tl-desc">Built responsive web pages and console apps using HTML, CSS, JavaScript, Java, and SQL. Built this portfolio from scratch.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Education Timeline -->
+            <div class="resume-section-card reveal" style="margin-top:24px;">
+              <h3 class="rs-title">Education</h3>
+              <div class="timeline">
+                <div class="tl-item">
+                  <div class="tl-dot tl-dot-edu"></div>
+                  <div class="tl-body">
+                    <div class="tl-meta">
+                      <span class="tl-role">BS Information Technology</span>
+                      <span class="tl-period">2023 – Present</span>
+                    </div>
+                    <span class="tl-company">Our Lady Of Lourdes College</span>
+                    <p class="tl-desc">GPA 1.50 · Database, Programming, Networking, Web Development</p>
+                  </div>
+                </div>
+                <div class="tl-item">
+                  <div class="tl-dot tl-dot-edu"></div>
+                  <div class="tl-body">
+                    <div class="tl-meta">
+                      <span class="tl-role">Senior High — STEM</span>
+                      <span class="tl-period">2021 – 2023</span>
+                    </div>
+                    <span class="tl-company">Electron College Of Technical Education</span>
+                    <p class="tl-desc">Graduated with Academic Excellence.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== PAGE: CONTACT ===== -->
+    <section id="contact" class="page">
+      <div class="container">
+        <div class="page-header reveal">
+          <span class="pill-tag">Get In Touch</span>
+          <h2 class="page-title">Let's Work Together</h2>
+          <p class="page-sub">Ready to reclaim your time? Let's talk.</p>
+        </div>
+
+        <div class="contact-wrap">
+          <div class="contact-left reveal">
+            <div class="contact-info-block">
+              <h3>Reach me directly</h3>
+              <div class="contact-links">
+
+                <!-- Twitter / X -->
+                <a href="https://x.com/percyvillii" target="_blank" class="contact-link-item">
+                  <div class="cli-logo-wrap">
+                    <!-- Placeholder: replace with your X / Twitter logo image -->
+                    <img src="x-twitter-logo.png" alt="X Twitter"
+                      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <span class="cli-fallback" style="display:none;">𝕏</span>
+                  </div>
+                  <div>
+                    <span class="cli-label">Twitter / X</span>
+                    <span class="cli-val">@percyvillii</span>
+                  </div>
+                  <svg class="cli-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/share/1GWirLEnjt/" target="_blank" class="contact-link-item">
+                  <div class="cli-logo-wrap">
+                    <!-- Placeholder: replace with your Facebook logo image -->
+                    <img src="facebook-logo.png" alt="Facebook"
+                      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <span class="cli-fallback" style="display:none;">f</span>
+                  </div>
+                  <div>
+                    <span class="cli-label">Facebook</span>
+                    <span class="cli-val">James Federipe</span>
+                  </div>
+                  <svg class="cli-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+
+                <!-- Telegram -->
+                <a href="https://t.me/percyvilli" target="_blank" class="contact-link-item">
+                  <div class="cli-logo-wrap">
+                    <!-- Placeholder: replace with your Telegram logo image -->
+                    <img src="telegram-logo.png" alt="Telegram"
+                      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <span class="cli-fallback" style="display:none;">✈</span>
+                  </div>
+                  <div>
+                    <span class="cli-label">Telegram</span>
+                    <span class="cli-val">@percyvilli</span>
+                  </div>
+                  <svg class="cli-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/federipejames?igsh=MWJncTBiNDQ0ZjkwYg==" target="_blank" class="contact-link-item">
+                  <div class="cli-logo-wrap">
+                    <!-- Placeholder: replace with your Instagram logo image -->
+                    <img src="instagram-logo.png" alt="Instagram"
+                      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <span class="cli-fallback" style="display:none;">◎</span>
+                  </div>
+                  <div>
+                    <span class="cli-label">Instagram</span>
+                    <span class="cli-val">@federipejames</span>
+                  </div>
+                  <svg class="cli-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="availability-card reveal">
+              <div class="avail-header">
+                <span class="avail-dot"></span>
+                <span>Available for new clients</span>
+              </div>
+              <p>Based in the Philippines · Works globally · Remote-only</p>
+              <div class="avail-tags">
+                <span>Bookkeeping</span>
+                <span>Virtual Assistant</span>
+                <span>AI Video</span>
+                <span>Web Dev</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-right reveal">
+            <div class="contact-cta-card">
+              <h3>Start a chat</h3>
+              <p>No calls, no pressure — just message me on Telegram or X. I'll listen closely to understand your tasks, goals, timeline, and budget, and reply as soon as I can.</p>
+              <a href="https://t.me/percyvilli" target="_blank" class="btn btn-primary btn-xl">
+                <span>Chat on Telegram</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="https://x.com/percyvillii" target="_blank" class="btn btn-outline">DM on Twitter / X</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span class="footer-logo">James Federipe<span class="dot">.</span></span>
+        <p class="footer-copy">© 2026 James Federipe. All rights reserved. Built from scratch.</p>
+        <div class="footer-socials">
+          <a href="https://x.com/percyvillii" target="_blank" aria-label="Twitter">𝕏</a>
+          <a href="https://www.facebook.com/share/1GWirLEnjt/" target="_blank" aria-label="Facebook">f</a>
+          <a href="https://t.me/percyvilli" target="_blank" aria-label="Telegram">✈</a>
+          <a href="https://www.instagram.com/federipejames?igsh=MWJncTBiNDQ0ZjkwYg==" target="_blank" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
 
   <script src="script.js"></script>
 </body>
