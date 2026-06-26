@@ -1,5 +1,5 @@
 /* ===================================================
-   JAMES FEDERIPE — PORTFOLIO JS v4
+   JAMES FEDERIPE — PORTFOLIO JS v5
 =================================================== */
 
 /* ===== THEME ===== */
@@ -34,8 +34,8 @@ if (toggle) {
   });
 }
 
-/* ===== SIDEBAR / MOBILE DRAWER ===== */
-const sidebar         = document.getElementById('sidebar');
+/* ===== TOPBAR / MOBILE DROPDOWN ===== */
+const sidebar         = document.getElementById('sidebar'); // now the <header class="topbar">
 const sidebarBackdrop = document.getElementById('sidebarBackdrop');
 const hamburger       = document.getElementById('hamburger');
 
@@ -104,12 +104,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-/* ===== VIDEO: STRICT MUTUAL EXCLUSION =====
-   Fix: previous version relied on a play().then() callback to flag the
-   "is-playing" state, which could resolve AFTER another video had already
-   been told to take over — letting two cards appear active at once.
-   This version drives all state off the video element's own play/pause
-   events, and always pauses every other video before starting a new one. */
+/* ===== VIDEO: STRICT MUTUAL EXCLUSION ===== */
 function initVideos() {
   const cards = Array.from(document.querySelectorAll('.vid-card'));
 
@@ -156,7 +151,7 @@ function initVideos() {
       card.classList.remove('is-playing');
     });
 
-    function toggle() {
+    function toggleVid() {
       if (video.paused) {
         pauseAllExcept(video);
         video.play().catch(() => {});
@@ -167,12 +162,12 @@ function initVideos() {
 
     playBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      toggle();
+      toggleVid();
     });
 
     card.addEventListener('click', (e) => {
       if (e.target === playBtn || playBtn.contains(e.target)) return;
-      toggle();
+      toggleVid();
     });
   });
 }
@@ -239,5 +234,5 @@ window.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initCounters();
   initVideos();
-  console.log('✅ James Federipe portfolio v4 ready');
+  console.log('✅ James Federipe portfolio v5 ready');
 });
