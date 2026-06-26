@@ -167,10 +167,11 @@ button { cursor: pointer; }
 .side-socials a {
   width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;
   border-radius: 9px; background: var(--bg3); border: 1px solid var(--border-soft);
-  font-size: 0.85rem; font-weight: 700; color: var(--text-muted);
-  transition: color 0.2s, border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s;
+  overflow: hidden;
 }
-.side-socials a:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
+.side-socials a img { width: 100%; height: 100%; object-fit: cover; }
+.side-socials a:hover { border-color: var(--accent); transform: translateY(-2px); }
 
 /* hamburger — mobile only, opens a top dropdown panel */
 .hamburger {
@@ -292,13 +293,15 @@ button { cursor: pointer; }
 
 .social-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .social-pill {
-  font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
+  display: flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px;
   background: var(--card); border: 1px solid var(--border-soft);
-  padding: 7px 16px; border-radius: 100px;
-  transition: color 0.2s, border-color 0.2s, transform 0.2s;
+  border-radius: 100px; overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
   cursor: pointer;
 }
-.social-pill:hover { color: var(--accent2); border-color: rgba(139,92,246,0.3); transform: translateY(-2px); }
+.social-pill img { width: 100%; height: 100%; object-fit: cover; }
+.social-pill:hover { border-color: rgba(139,92,246,0.4); transform: translateY(-2px); }
 
 .hero-right { flex-shrink: 0; position: relative; z-index: 2; }
 .hero-card-img { position: relative; display: inline-block; }
@@ -606,8 +609,9 @@ button { cursor: pointer; }
 .footer-logo { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.3rem; font-weight: 800; letter-spacing: -0.03em; }
 .footer-copy { font-size: 0.8rem; color: var(--text-muted); }
 .footer-socials { display: flex; gap: 12px; }
-.footer-socials a { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 9px; background: var(--bg2); border: 1px solid var(--border-soft); font-size: 0.9rem; font-weight: 700; color: var(--text-muted); transition: all 0.2s; cursor: pointer; }
-.footer-socials a:hover { background: var(--accent); color: #06231f; border-color: var(--accent); transform: translateY(-2px); }
+.footer-socials a { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 9px; background: var(--bg2); border: 1px solid var(--border-soft); overflow: hidden; transition: all 0.2s; cursor: pointer; }
+.footer-socials a img { width: 100%; height: 100%; object-fit: cover; }
+.footer-socials a:hover { border-color: var(--accent); transform: translateY(-2px); }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1300px) {
